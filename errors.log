@@ -1,0 +1,26 @@
+[25-Mar-2021 09:02:08 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:02:15 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:02:15 Europe/Berlin] SessionController::validateSession()
+[25-Mar-2021 09:02:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/registrarusuario, url => registrarusuario
+[25-Mar-2021 09:02:15 Europe/Berlin] sessionController::isPublic(): currentURL => registrarusuario
+[25-Mar-2021 09:02:15 Europe/Berlin] SessionController::validateSession() redirect al login
+[25-Mar-2021 09:02:15 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:02:15 Europe/Berlin] App::construct -> No hay controlador especificado
+[25-Mar-2021 09:02:15 Europe/Berlin] SessionController::validateSession()
+[25-Mar-2021 09:02:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/, url => 
+[25-Mar-2021 09:02:15 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[25-Mar-2021 09:02:15 Europe/Berlin] SessionController::validateSession() public page
+[25-Mar-2021 09:02:15 Europe/Berlin] Inicio de login
+[25-Mar-2021 09:03:26 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:04:57 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:04:57 Europe/Berlin] SessionController::validateSession()
+[25-Mar-2021 09:04:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/signup, url => signup
+[25-Mar-2021 09:04:57 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[25-Mar-2021 09:04:57 Europe/Berlin] SessionController::validateSession() public page
+[25-Mar-2021 09:04:57 Europe/Berlin] PHP Warning:  require(views/login/registrar.php): failed to open stream: No such file or directory in C:\xampp\htdocs\seguros_bolivia\libs\view.php on line 10
+[25-Mar-2021 09:04:57 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'views/login/registrar.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\seguros_bolivia\libs\view.php on line 10
+[25-Mar-2021 09:06:05 Europe/Berlin] Prueba de errores
+[25-Mar-2021 09:06:05 Europe/Berlin] SessionController::validateSession()
+[25-Mar-2021 09:06:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/signup, url => signup
+[25-Mar-2021 09:06:05 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[25-Mar-2021 09:06:05 Europe/Berlin] SessionController::validateSession() public page
