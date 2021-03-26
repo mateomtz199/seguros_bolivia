@@ -1,39 +1,50 @@
 <?php
-class SignUp extends SessionController{
-    function __construct(){
+
+require_once "models/userModel.php";
+
+class SignUp extends SessionController
+{
+    function __construct()
+    {
         parent::__construct();
     }
 
-    function render(){
+    function render()
+    {
         $this->view->render("login/signup", []);
     }
-    function nuevoUsuario(){
-        if($this->existPOST(["usuario", "password"])){
+    function nuevoUsuario()
+    {
+        if ($this->existPOST(["nombre", "apellidos", "cargo", "usuario", "password"])) {
             $nombre = $this->getPost("nombre");
             $apellidos = $this->getPost("apellidos");
             $cargo = $this->getPost("cargo");
-            $usuario = $this->getPost("usuario");
-            $pasword = $this->getPost("password");
-            if($usuario == "" || empty($usuario) || $pasword == "" || empty($pasword)){
-                $this->redirect("signup", ["error" => "Algun campo esta vacio"]);
+            $username = $this->getPost("usuario");
+            $password = $this->getPost("password");
+            if (
+                $nombre == "" || empty($nombre) || $apellidos == "" || empty($apellidos) ||
+                $cargo == "" || empty($cargo) ||
+                $username == "" || empty($usuario) || $password == "" || empty($pasword)
+            ) {
+                $this->redirect("signup", ["error" => ErrorMessages::ERROR_SIGNUP_CAMPOS_VACIOS]);
             }
             $usuario = new UserModel();
             $usuario->setNombre($nombre);
             $usuario->setApellidos($apellidos);
             $usuario->setCargo($cargo);
-            $usuario->setUsuario($usuario);
-            $usuario->setPassword($pasword);
-            
+            $usuario->setUsuario($username);
+            $usuario->setPassword($password);
+
             $usuario->setRol("user");
-            if($usuario->exists($usuario)){
-                $this->redirect("signup", ["error" => "El nombre de usuario ya existe"]);
-            }else if($usuario->save()){
-                $this->redirect("", ["success" => "Usuario registrado correctamente"]);
-            }else{
-                $this->redirect("signup", ["error" => "Error al reistrar nuevo usuario"]);
+            if ($usuario->exists($username)) {
+                $this->redirect("signup", ["error" => ErrorMessages::ERROR_SIGNUP_USUARIO_EXISTE]);
+            } else if ($usuario->save()) {
+                $this->redirect("", ["success" => SuccessMessages::USURIO_CREADO]);
+            } else {
+                $this->redirect("signup", ["error" => ErrorMessages::ERROR_SIGNUP_ERROR]);
             }
-        }else{
-            $this->redirect("signup", ["error" => "Error al reistrar nuevo usuario"]);
+        } else {
+            $this->redirect("signup", ["error" => ErrorMessages::ERROR_SIGNUP_ERROR]);
         }
     }
 }

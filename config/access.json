@@ -1,39 +1,44 @@
 {
-  "sites": [
-    {
-      "site": "",
-      "access": "public",
-      "role": ""
-    },
-    {
-      "site": "signup",
-      "access": "public",
-      "role": ""
-    },
-    {
-      "site": "dashboard",
-      "access": "private",
-      "role": "user"
-    },
-    {
-      "site": "expenses",
-      "access": "private",
-      "role": "user"
-    },
-    {
-      "site": "user",
-      "access": "private",
-      "role": "user"
-    },
-    {
-      "site": "admin",
-      "access": "private",
-      "role": "admin"
-    }
-  ],
+    "sites": [
+        {
+            "site": "",
+            "access": "public",
+            "role": ""
+        },
+        {
+            "site": "signup",
+            "access": "public",
+            "role": ""
+        },
+        {
+            "site": "dashboard",
+            "access": "private",
+            "role": "user"
+        },
+        {
+            "site": "asegurados",
+            "access": "private",
+            "role": "user"
+        },
+        {
+            "site": "dependientes",
+            "access": "private",
+            "role": "user"
+        },
+        {
+            "site": "planes",
+            "access": "private",
+            "role": "user"
+        },
+        {
+            "site": "admin",
+            "access": "private",
+            "role": "admin"
+        }
+    ],
 
-  "default-sites": {
-    "user": "dashboard",
-    "admin": "admin"
-  }
+    "default-sites": {
+        "user": "dashboard",
+        "admin": "admin"
+    }
 }
