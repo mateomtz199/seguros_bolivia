@@ -1,6 +1,7 @@
 <?php
 require_once "models/aseguradosmodel.php";
 require_once "models/planesmodel.php";
+require_once "models/userModel.php";
 class Asegurados extends SessionController
 {
     private $user;
@@ -31,8 +32,8 @@ class Asegurados extends SessionController
         $extension = explode(".", $fotoCertificado["name"]);
         $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
         $ext = $extension[sizeof($extension) - 1];
-        $hash = md5(Date("Ymdi") . $filename) . "." . $ext;
-        $targetFile = $urlImages . $hash;
+        $hashCertificado = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $targetFile = $urlImages . $hashCertificado;
         $upLoadOk = false;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
         $check = getimagesize($fotoCertificado["tmp_name"]);
@@ -43,14 +44,36 @@ class Asegurados extends SessionController
         }
 
         if (!$upLoadOk) {
-            $this->redirect("dashboard", []);
+            $this->redirect("asegurados/create", []);
         } else {
-            if (move_uploaded_file($fotoCertificado["tmp_name"], $urlImages)) {
+            if (move_uploaded_file($fotoCertificado["tmp_name"], $targetFile)) {
                 $this->redirect("asegurados", []);
             }
         }
-        $fotoCarnet = "No hay";
 
+        $fotoCarnet = $_FILES["fotoCarnet"];
+        $urlImages = "public/img/";
+        $extension = explode(".", $fotoCarnet["name"]);
+        $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
+        $ext = $extension[sizeof($extension) - 1];
+        $hashCarnet = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $targetFile = $urlImages . $hashCarnet;
+        $upLoadOk = false;
+        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $check = getimagesize($fotoCarnet["tmp_name"]);
+        if ($check != false) {
+            $upLoadOk = true;
+        } else {
+            $upLoadOk = false;
+        }
+
+        if (!$upLoadOk) {
+            $this->redirect("asegurados/create", []);
+        } else {
+            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile)) {
+                $this->redirect("asegurados", []);
+            }
+        }
 
         $hoy = date("Y-m-d");
         $asegurado = new AseguradosModel();
@@ -59,10 +82,79 @@ class Asegurados extends SessionController
         $asegurado->setApellidos($this->getPost("apellidos"));
         $asegurado->setDireccion($this->getPost("direccion"));
         $asegurado->setTelefono($this->getPost("telefono"));
-        $asegurado->setFotoCertificadoNacimiento($hash);
-        $asegurado->setFotoCarnetIdentidad($fotoCarnet);
+        $asegurado->setFotoCertificadoNacimiento($hashCertificado);
+        $asegurado->setFotoCarnetIdentidad($hashCarnet);
         $asegurado->setCreateAt($hoy);
         $asegurado->save();
+        $this->redirect("dashboard", []);
+    }
+    public function update()
+    {
+        if (!$this->existPOST(["planId", "nombre", "apellidos", "direccion", "telefono"])) {
+            $this->redirect("asegurados/create", []);
+            return;
+        }
+        if ($this->user == null) {
+            $this->redirect("asegurados/create", []);
+            return;
+        }
+        $fotoCertificado = $_FILES["fotoCertificado"];
+        $urlImages = "public/img/";
+        $extension = explode(".", $fotoCertificado["name"]);
+        $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
+        $ext = $extension[sizeof($extension) - 1];
+        $hashCertificado = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $targetFile = $urlImages . $hashCertificado;
+        $upLoadOk = false;
+        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $check = getimagesize($fotoCertificado["tmp_name"]);
+        if ($check != false) {
+            $upLoadOk = true;
+        } else {
+            $upLoadOk = false;
+        }
+
+        if (!$upLoadOk) {
+            $this->redirect("asegurados/create", []);
+        } else {
+            if (move_uploaded_file($fotoCertificado["tmp_name"], $targetFile)) {
+                $this->redirect("asegurados", []);
+            }
+        }
+
+        $fotoCarnet = $_FILES["fotoCarnet"];
+        $urlImages = "public/img/";
+        $extension = explode(".", $fotoCarnet["name"]);
+        $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
+        $ext = $extension[sizeof($extension) - 1];
+        $hashCarnet = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $targetFile = $urlImages . $hashCarnet;
+        $upLoadOk = false;
+        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $check = getimagesize($fotoCarnet["tmp_name"]);
+        if ($check != false) {
+            $upLoadOk = true;
+        } else {
+            $upLoadOk = false;
+        }
+
+        if (!$upLoadOk) {
+            $this->redirect("asegurados/create", []);
+        } else {
+            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile)) {
+                $this->redirect("asegurados", []);
+            }
+        }
+
+        $asegurado = new AseguradosModel();
+        $asegurado->setPlanId($this->getPost("planId"));
+        $asegurado->setNombre($this->getPost("nombre"));
+        $asegurado->setApellidos($this->getPost("apellidos"));
+        $asegurado->setDireccion($this->getPost("direccion"));
+        $asegurado->setTelefono($this->getPost("telefono"));
+        $asegurado->setFotoCertificadoNacimiento($hashCertificado);
+        $asegurado->setFotoCarnetIdentidad($hashCarnet);
+        $asegurado->update();
         $this->redirect("dashboard", []);
     }
     public function create()
@@ -73,22 +165,53 @@ class Asegurados extends SessionController
             "user" => $this->user
         ]);
     }
-    public function getAseguradosJSON()
-    {
-        header("Content-Type: application/json");
-        $res = [];
-    }
-    public function delete($parametros)
+    public function eliminar($parametros)
     {
         if ($parametros == null) {
             $this->redirect("dashboard", []);
         }
         $id = $parametros[0];
+        $asegurado = new AseguradosModel();
+        $img = $asegurado->get($id);
         $res = $this->model->delete($id);
         if ($res) {
-            $this->redirect("asegurados", []);
+
+            unlink("public/img/" . $asegurado->getFotoCarnetIdentidad());
+            unlink("public/img/" . $asegurado->getFotoCertificadoNacimiento());
+
+            $this->redirect("dashboard", []);
         } else {
-            $this->redirect("asegurados", []);
+            $this->redirect("dashboard", []);
         }
+    }
+    public function editar($parametros)
+    {
+        if ($parametros == null) {
+            $this->redirect("dashboard", []);
+        }
+        $id = $parametros[0];
+        $asegurado = new AseguradosModel();
+        $planes = new PlanesModel();
+
+        error_log("Metodo del controller editar: " . $id);
+
+        $this->view->render("asegurados/editar", [
+            "user" => $this->user,
+            "asegurado" => $asegurado->get($id),
+            "planes" => $planes->getAll()
+        ]);
+    }
+    public function ver($parametros)
+    {
+        if ($parametros == null) {
+            $this->redirect("dashboard", []);
+        }
+        $id = $parametros[0];
+        $asegurado = new AseguradosModel();
+
+        $this->view->render("asegurados/ver", [
+            "user" => $this->user,
+            "asegurado" => $asegurado->getWithPlan($id)
+        ]);
     }
 }

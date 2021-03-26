@@ -15,7 +15,7 @@ class Dashboard extends SessionController
         $aseguradosModel = new AseguradosModel();
         $this->view->render("dashboard/index", [
             "user" => $this->user,
-            "asegurados" => $aseguradosModel->getAll(),
+            "asegurados" => $aseguradosModel->getAllWithPlan(),
         ]);
     }
     public function getAsegurados()

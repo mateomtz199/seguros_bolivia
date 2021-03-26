@@ -11,6 +11,7 @@ class AseguradosModel extends Model implements IModel
     private $createAt;
     private $planId;
     private $dependientes;
+    private $nombrePlan;
     private $plan;
 
     public function __construct()
@@ -61,10 +62,17 @@ class AseguradosModel extends Model implements IModel
     }
     public function getAllWithPlan()
     {
+
+        $sql = "SELECT a.id, a.plan_id, a.nombre, a.apellidos, a.dirección, a.telefono, a.foto_certificado_nacimiento, 
+                    a.foto_carnet_identidad, a.create_at, p.nombre as nombre_plan
+                    FROM asegurados a
+                    INNER JOIN planes p
+                    ON a.plan_id = p.id";
+
         $items = [];
 
         try {
-            $query = $this->query("SELECT * FROM asegurados");
+            $query = $this->query($sql);
             while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
                 $item = new AseguradosModel();
                 $item->from($p);
@@ -72,29 +80,54 @@ class AseguradosModel extends Model implements IModel
             }
             return $items;
         } catch (PDOException $e) {
-            error_log("Asegurados_Model::getAll -> Algo anda fallando " . $e);
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
             return false;
         }
     }
     public function get($id)
     {
         try {
-            $query = $this->query("SELECT * FROM asegurados WHERE id=:id");
-            $query->execute([
-                "id" => $id
-            ]);
+            $query = $this->prepare("SELECT * FROM asegurados WHERE id=:id");
+            $query->execute(["id" => $id]);
             $asegurado = $query->fetch(PDO::FETCH_ASSOC);
-            $this->from($asegurado);
+            $this->from1($asegurado);
             return $this;
         } catch (PDOException $e) {
             error_log("Asegurados_Model::get -> Algo anda fallando " . $e);
             return false;
         }
     }
+    public function getWithPlan($id)
+    {
+        $sql = "SELECT a.id, a.plan_id, a.nombre, a.apellidos, a.dirección, a.telefono, a.foto_certificado_nacimiento, 
+                    a.foto_carnet_identidad, a.create_at, p.nombre as nombre_plan
+                    FROM asegurados a
+                    INNER JOIN planes p
+                    ON a.plan_id = p.id
+                    WHERE a.id = :id";
+
+        $items = [];
+
+        try {
+            $query = $this->prepare($sql);
+            $query->execute(["id" => $id]);
+            $asegurado = $query->fetch(PDO::FETCH_ASSOC);
+            $this->from1($asegurado);
+            $Plan = new PlanesModel();
+
+            $this->plan = $Plan->getById($this->getPlanId());
+
+            error_log("Plan nombre: " . $this->getPlan()->getNombre());
+            return $this;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
     public function delete($id)
     {
         try {
-            $query = $this->query("DELETE FROM asegurados WHERE id=:id");
+            $query = $this->prepare("DELETE FROM asegurados WHERE id=:id");
             $query->execute([
                 "id" => $id
             ]);
@@ -108,7 +141,7 @@ class AseguradosModel extends Model implements IModel
     {
         try {
             $query = $this->prepare("UPDATE asegurados SET plan_id = :planId, nombre = :nombre, apellidos = :apellidos,
-                                direccion = :direccion, telefono = :telefono, foto_certificado_nacimiento = :fotoCertificado, foto_carnet_identidad = :fotoCarnet, create_at = :createAt WHERE id=:id");
+                                direccion = :direccion, telefono = :telefono, foto_certificado_nacimiento = :fotoCertificado, foto_carnet_identidad = :fotoCarnet WHERE id=:id");
             $query->execute([
                 "planId" => $this->planId,
                 "nombre" => $this->nombre,
@@ -117,7 +150,6 @@ class AseguradosModel extends Model implements IModel
                 "telefono" => $this->telefono,
                 "fotoCertificado" => $this->fotoCertificadoNacimiento,
                 "fotoCarnet" => $this->fotoCarnetIdentidad,
-                "createAt" => $this->createAt,
                 "id" => $this->id
             ]);
             if ($query->rowCount()) {
@@ -131,6 +163,19 @@ class AseguradosModel extends Model implements IModel
         }
     }
     public function from($array)
+    {
+        $this->id = $array["id"];
+        $this->planId = $array["plan_id"];
+        $this->nombre = $array["nombre"];
+        $this->apellidos = $array["apellidos"];
+        $this->direccion = $array["dirección"];
+        $this->telefono = $array["telefono"];
+        $this->fotoCertificadoNacimiento = $array["foto_certificado_nacimiento"];
+        $this->fotoCarnetIdentidad = $array["foto_carnet_identidad"];
+        $this->createAt = $array["create_at"];
+        $this->nombrePlan = $array["nombre_plan"];
+    }
+    public function from1($array)
     {
         $this->id = $array["id"];
         $this->planId = $array["plan_id"];
@@ -241,6 +286,26 @@ class AseguradosModel extends Model implements IModel
     public function setCreateAt($createAt): self
     {
         $this->createAt = $createAt;
+        return $this;
+    }
+
+    public function getNombrePlan()
+    {
+        return $this->nombrePlan;
+    }
+    public function setNombrePlan($nombrePlan): self
+    {
+        $this->nombrePlan = $nombrePlan;
+        return $this;
+    }
+
+    public function getPlan()
+    {
+        return $this->plan;
+    }
+    public function setPlan($plan): self
+    {
+        $this->plan = $plan;
         return $this;
     }
 }

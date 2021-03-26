@@ -1,6 +1,8 @@
 <?php
-$planes = $this->d['planes'];
+$planes = $this->d["planes"];
 $usuario = $this->d["user"];
+$asegurado = $this->d["asegurado"];
+
 require_once "views/header.php";
 ?>
 
@@ -25,7 +27,7 @@ require_once "views/header.php";
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Nombre</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="nombre" id="validationCustom01" required>
+                <input class="form-control" type="text" name="nombre" id="validationCustom01" value="<?php echo $asegurado->getNombre(); ?>" required>
             </div>
 
         </div>
@@ -33,7 +35,7 @@ require_once "views/header.php";
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Apellidos</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="apellidos" id="" required>
+                <input class="form-control" type="text" name="apellidos" id="" required value="<?php echo $asegurado->getApellidos(); ?>">
             </div>
 
         </div>
@@ -41,21 +43,23 @@ require_once "views/header.php";
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Dirección</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="direccion" id="" required>
+                <input class="form-control" type="text" name="direccion" id="" required value="<?php echo $asegurado->getDireccion(); ?>">
             </div>
+
         </div>
 
         <div class="row mb-3">
-            <label class="col-sm-4 col-form-label" for="nombre">Teléfono (10 digitos)</label>
+            <label class="col-sm-4 col-form-label" for="nombre">Teléfono</label>
             <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="[0-9]{10}" name="telefono" id="" required>
+                <input class="form-control" type="tel" pattern="[0-9]{10}" name="telefono" id="" required value="<?php echo $asegurado->getTelefono(); ?>">
             </div>
-        </div>
 
+        </div>
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Foto de certificado de nacimiento</label>
             <div class="col-sm-8">
                 <input class="form-control" type="file" name="fotoCertificado" id="" required accept="image/*">
+                <img src="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCertificadoNacimiento() ?>" height="200px">
             </div>
 
         </div>
@@ -63,6 +67,7 @@ require_once "views/header.php";
             <label class="col-sm-4 col-form-label" for="nombre">Foto carnet de identidad</label>
             <div class="col-sm-8">
                 <input class="form-control" type="file" name="fotoCarnet" id="" required accept="image/*">
+                <img src="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCarnetIdentidad() ?>" height="100px">
             </div>
 
         </div>

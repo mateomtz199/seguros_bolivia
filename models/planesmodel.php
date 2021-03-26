@@ -31,7 +31,7 @@ class PlanesModel extends Model
     public function getById($id)
     {
         try {
-            $query = $this->query("SELECT * FROM planes WHERE id=:id");
+            $query = $this->prepare("SELECT * FROM planes WHERE id=:id");
             $query->execute([
                 "id" => $id
             ]);
@@ -48,7 +48,7 @@ class PlanesModel extends Model
     {
         $this->id = $array["id"];
         $this->nombre = $array["nombre"];
-        $this->precio = $array["nombre"];
+        $this->precio = $array["precio"];
         $this->precioDependiente = $array["precio_dependiente"];
         $this->descripcion = $array["descripcion"];
     }
