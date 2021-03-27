@@ -173,11 +173,12 @@ class Asegurados extends SessionController
         }
         $id = $parametros[0];
         $asegurado = new AseguradosModel();
+        $aseguradoFoto = $asegurado->get($id);
         $res = $this->model->delete($id);
         if ($res) {
 
-            unlink("public/img/" . $asegurado->getFotoCarnetIdentidad());
-            unlink("public/img/" . $asegurado->getFotoCertificadoNacimiento());
+            unlink("public/img/" . $aseguradoFoto->getFotoCarnetIdentidad());
+            unlink("public/img/" . $aseguradoFoto->getFotoCertificadoNacimiento());
 
             $this->redirect("dashboard", []);
         } else {
