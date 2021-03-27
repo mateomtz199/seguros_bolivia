@@ -148,6 +148,7 @@ class Dependiente extends SessionController
                 $aseguradoId = $this->getPost("aseguradoId");
 
                 $dependiente = new DependienteModel();
+                $dependiente->setId($this->getPost("idDependiente"));
                 $dependiente->setAseguradoId($aseguradoId);
                 $dependiente->setNombre($this->getPost("nombre"));
                 $dependiente->setApellidos($this->getPost("apellidos"));

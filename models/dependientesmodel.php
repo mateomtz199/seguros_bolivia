@@ -120,6 +120,7 @@ class DependienteModel extends Model implements IModel
             $query = $this->prepare("UPDATE dependientes SET asegurado_id = :aseguradoId, nombre = :nombre, apellidos = :apellidos,
                                 direccion = :direccion, telefono = :telefono, foto_certificado_nacimiento = :fotoCertificado, foto_carnet_identidad = :fotoCarnet WHERE id=:id");
             $query->execute([
+                "id" => $this->id,
                 "aseguradoId" => $this->aseguradoId,
                 "nombre" => $this->nombre,
                 "apellidos" => $this->apellidos,
@@ -127,8 +128,9 @@ class DependienteModel extends Model implements IModel
                 "telefono" => $this->telefono,
                 "fotoCertificado" => $this->fotoCertificadoNacimiento,
                 "fotoCarnet" => $this->fotoCarnetIdentidad,
-                "id" => $this->id
+
             ]);
+            error_log("Dependientes_Model::update -> Asegurado ID " . $this->id);
             if ($query->rowCount()) {
                 return true;
             } else {

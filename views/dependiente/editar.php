@@ -14,6 +14,7 @@ require_once "views/header.php";
     <form action="<?php echo constant("URL") ?>dependiente/update" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
 
         <input type="hidden" value="<?php echo $asegurado->getId(); ?>" name="aseguradoId">
+        <input type="hidden" value="<?php echo $dependiente->getId(); ?>" name="idDependiente">
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Nombre</label>
             <div class="col-sm-8">
