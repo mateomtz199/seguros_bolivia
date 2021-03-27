@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2021 a las 03:21:11
+-- Tiempo de generación: 27-03-2021 a las 08:27:25
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.2
 
@@ -226,7 +226,7 @@ ALTER TABLE `clinicas`
 ALTER TABLE `dependientes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `foto_certificado_nacimiento` (`foto_certificado_nacimiento`),
-  ADD KEY `asegurado_id` (`asegurado_id`);
+  ADD KEY `dependientes_ibfk_1` (`asegurado_id`);
 
 --
 -- Indices de la tabla `doctores`
@@ -368,7 +368,7 @@ ALTER TABLE `clinicas`
 -- Filtros para la tabla `dependientes`
 --
 ALTER TABLE `dependientes`
-  ADD CONSTRAINT `dependientes_ibfk_1` FOREIGN KEY (`asegurado_id`) REFERENCES `asegurados` (`id`);
+  ADD CONSTRAINT `dependientes_ibfk_1` FOREIGN KEY (`asegurado_id`) REFERENCES `asegurados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `doctores`
