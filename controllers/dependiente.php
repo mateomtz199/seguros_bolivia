@@ -3,7 +3,7 @@ require_once "models/aseguradosmodel.php";
 require_once "models/planesmodel.php";
 require_once "models/userModel.php";
 require_once "models/dependientesmodel.php";
-class Asegurados extends SessionController
+class Dependiente extends SessionController
 {
     private $user;
     public function __construct()
@@ -18,14 +18,14 @@ class Asegurados extends SessionController
             "user" => $this->user,
         ]);
     }
-    public function newAsegurado()
+    public function newDependiente()
     {
-        if (!$this->existPOST(["planId", "nombre", "apellidos", "direccion", "telefono"])) {
-            $this->redirect("asegurados/create", []);
+        if (!$this->existPOST(["nombre", "apellidos", "direccion", "telefono"])) {
+            $this->redirect("dashboard", []);
             return;
         }
         if ($this->user == null) {
-            $this->redirect("asegurados/create", []);
+            $this->redirect("dashboard", []);
             return;
         }
         $fotoCertificado = $_FILES["fotoCertificado"];
@@ -45,11 +45,7 @@ class Asegurados extends SessionController
         }
 
         if (!$upLoadOk) {
-            $this->redirect("asegurados/create", []);
-        } else {
-            if (move_uploaded_file($fotoCertificado["tmp_name"], $targetFile)) {
-                $this->redirect("asegurados", []);
-            }
+            $this->redirect("dashboard", []);
         }
 
         $fotoCarnet = $_FILES["fotoCarnet"];
@@ -69,25 +65,32 @@ class Asegurados extends SessionController
         }
 
         if (!$upLoadOk) {
-            $this->redirect("asegurados/create", []);
+            $this->redirect("dashboard", []);
         } else {
-            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile)) {
-                $this->redirect("asegurados", []);
+            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile) && move_uploaded_file($fotoCertificado["tmp_name"], $targetFile)) {
+
+                $aseguradoId = $this->getPost("aseguradoId");
+
+                $dependiente = new DependienteModel();
+                $dependiente->setAseguradoId($aseguradoId);
+                $dependiente->setNombre($this->getPost("nombre"));
+                $dependiente->setApellidos($this->getPost("apellidos"));
+                $dependiente->setDireccion($this->getPost("direccion"));
+                $dependiente->setTelefono($this->getPost("telefono"));
+                $dependiente->setFotoCertificadoNacimiento($hashCertificado);
+                $dependiente->setFotoCarnetIdentidad($hashCarnet);;
+                $dependiente->save();
+
+                $asegurado = new AseguradosModel();
+                $dependientes = new DependienteModel();
+
+                $this->view->render("asegurados/ver", [
+                    "user" => $this->user,
+                    "asegurado" => $asegurado->getWithPlan($aseguradoId),
+                    "dependientes" => $dependientes->getPorAsegurado($aseguradoId)
+                ]);
             }
         }
-
-        $hoy = date("Y-m-d");
-        $asegurado = new AseguradosModel();
-        $asegurado->setPlanId($this->getPost("planId"));
-        $asegurado->setNombre($this->getPost("nombre"));
-        $asegurado->setApellidos($this->getPost("apellidos"));
-        $asegurado->setDireccion($this->getPost("direccion"));
-        $asegurado->setTelefono($this->getPost("telefono"));
-        $asegurado->setFotoCertificadoNacimiento($hashCertificado);
-        $asegurado->setFotoCarnetIdentidad($hashCarnet);
-        $asegurado->setCreateAt($hoy);
-        $asegurado->save();
-        $this->redirect("dashboard", []);
     }
     public function update()
     {
@@ -156,30 +159,56 @@ class Asegurados extends SessionController
         $asegurado->setFotoCertificadoNacimiento($hashCertificado);
         $asegurado->setFotoCarnetIdentidad($hashCarnet);
         $asegurado->update();
-        $this->redirect("dashboard", []);
+        $this->redirect("dependiente/ver", []);
     }
-    public function create()
+
+
+
+    public function crear($parametros)
     {
-        $planes = new PlanesModel();
-        $this->view->render("asegurados/create", [
-            "planes" => $planes->getAll(),
-            "user" => $this->user
-        ]);
+        if ($parametros == null) {
+            $this->redirect("dashboard", ["error" => ErrorMessages::ASEGURADO_COMPLETO_DEPENDIENTES]);
+        }
+        $id = $parametros[0];
+        $asegurado = new AseguradosModel();
+        $numero = $asegurado->numeroDependientes($id);
+        if ($numero >= 3) {
+            $this->redirect("dashboard", []); //Ya no se aceptan más
+        } else {
+            $this->view->render("dependiente/crear", [
+                "user" => $this->user,
+                "asegurado" => $asegurado->getWithPlan($id)
+            ]);
+        }
     }
+
+
+
     public function eliminar($parametros)
     {
         if ($parametros == null) {
             $this->redirect("dashboard", []);
         }
         $id = $parametros[0];
-        $asegurado = new AseguradosModel();
-        $res = $this->model->delete($id);
+
+        $dependiente = new DependienteModel();
+        $aseguradoId = $dependiente->getIdAsegurado($id);
+
+        $eliminado = $dependiente->get($id);
+
+        $res = $dependiente->delete($id);
         if ($res) {
 
-            unlink("public/img/" . $asegurado->getFotoCarnetIdentidad());
-            unlink("public/img/" . $asegurado->getFotoCertificadoNacimiento());
+            unlink("public/img/" . $eliminado->getFotoCarnetIdentidad());
+            unlink("public/img/" . $eliminado->getFotoCertificadoNacimiento());
 
-            $this->redirect("dashboard", []);
+            $asegurado = new AseguradosModel();
+
+            $this->view->render("asegurados/ver", [
+                "user" => $this->user,
+                "asegurado" => $asegurado->getWithPlan($aseguradoId),
+                "dependientes" => $dependiente->getPorAsegurado($aseguradoId)
+            ]);
         } else {
             $this->redirect("dashboard", []);
         }
@@ -207,13 +236,14 @@ class Asegurados extends SessionController
             $this->redirect("dashboard", []);
         }
         $id = $parametros[0];
+        $dependiente = new DependienteModel();
+        $aseguradoId = $dependiente->getIdAsegurado($id);
         $asegurado = new AseguradosModel();
-        $dependientes = new DependienteModel();
 
-        $this->view->render("asegurados/ver", [
+        $this->view->render("dependiente/ver", [
             "user" => $this->user,
-            "asegurado" => $asegurado->getWithPlan($id),
-            "dependientes" => $dependientes->getPorAsegurado($id)
+            "dependiente" => $dependiente->get($id),
+            "asegurado" => $asegurado->get($aseguradoId)
         ]);
     }
 }

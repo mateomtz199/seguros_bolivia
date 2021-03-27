@@ -10,7 +10,9 @@ require_once "views/header.php";
 <div class="col-9">
     <h3>Dashboard</h3>
     <hr>
-    <?php $this->showMessages(); ?>
+    <?php
+    $this->showMessages();
+    ?>
     <table class="table">
         <thead>
             <tr>
@@ -34,6 +36,8 @@ require_once "views/header.php";
                         <a href="<?php echo constant("URL") ?>asegurados/ver/<?php echo $asegurado->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
                         <a href="<?php echo constant("URL") ?>asegurados/editar/<?php echo $asegurado->getId(); ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
                         <a href="<?php echo constant("URL") ?>asegurados/eliminar/<?php echo $asegurado->getId(); ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                        <a href="<?php echo constant("URL") ?>dependiente/crear/<?php echo $asegurado->getId(); ?>" class="btn btn-warning">Agregar dependiente</a>
+
                     </td>
                 </tr>
             <?php } ?>

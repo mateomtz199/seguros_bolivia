@@ -6,6 +6,7 @@ class ErrorMessages
     const ERROR_SIGNUP_CAMPOS_VACIOS = "0576c75e752d04ac340ee5714a310e47";
     const ERROR_SIGNUP_ERROR = "1e01ebedf0d419ac6c6967aafe190ad4";
     const ERROR_LOGIN_AUTENTICATE_EMPTY = "54b4f3460274ba401899a9810adb150d";
+    const ASEGURADO_COMPLETO_DEPENDIENTES = "2a493b4713a5bf8cb23d7da99790cf7d";
     private $errorList = [];
     public function __construct()
     {
@@ -14,7 +15,8 @@ class ErrorMessages
             ErrorMessages::ERROR_SIGNUP_USUARIO_EXISTE => "El nombre de usuario ya existe",
             ErrorMessages::ERROR_SIGNUP_CAMPOS_VACIOS => "Los campos no pueden estar vacíos",
             ErrorMessages::ERROR_SIGNUP_ERROR => "Error al registrar usuario",
-            ErrorMessages::ERROR_LOGIN_AUTENTICATE_EMPTY => "Error de Llena los campos del login"
+            ErrorMessages::ERROR_LOGIN_AUTENTICATE_EMPTY => "Error de Llena los campos del login",
+            ErrorMessages::ASEGURADO_COMPLETO_DEPENDIENTES => "El asegurado ya tiene tres dependientes"
         ];
     }
     public function get($hash)

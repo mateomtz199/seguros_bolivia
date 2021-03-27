@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-03-2021 a las 20:25:06
+-- Tiempo de generación: 27-03-2021 a las 03:21:11
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.2
 
@@ -33,21 +33,12 @@ CREATE TABLE `asegurados` (
   `plan_id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellidos` varchar(80) NOT NULL,
-  `dirección` varchar(100) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
   `telefono` varchar(15) NOT NULL,
   `foto_certificado_nacimiento` varchar(150) NOT NULL,
   `foto_carnet_identidad` varchar(150) NOT NULL,
   `create_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `asegurados`
---
-
-INSERT INTO `asegurados` (`id`, `plan_id`, `nombre`, `apellidos`, `dirección`, `telefono`, `foto_certificado_nacimiento`, `foto_carnet_identidad`, `create_at`) VALUES
-(11, 1, 'Pedro', 'Pérez', 'A', '16516', '080fb723d923036fa128ff5f31a0b2ec.jpg', 'd3b9b8b563c1c45bde6d5abf42a28234.jpg', '2021-03-26'),
-(13, 3, 'Juan', 'Ulua', 'Centro', '366334', '4b71a116e8932d52408acd0eb5ce99f5.jpg', '6a5ffddd8dccec5297dbb927927e25db.jpg', '2021-03-26'),
-(14, 2, 'Pedro', 'María', 'San José', '4154545245', '5a61194a545b760ada4ed2bba982aebf.jpg', 'a9d37f08c3e734f5eaedc1264c273e54.jpg', '2021-03-26');
 
 -- --------------------------------------------------------
 
@@ -301,7 +292,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `asegurados`
 --
 ALTER TABLE `asegurados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `clinicas`

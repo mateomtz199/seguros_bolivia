@@ -1,33 +1,23 @@
 <?php
-$planes = $this->d["planes"];
 $usuario = $this->d["user"];
 $asegurado = $this->d["asegurado"];
-
 require_once "views/header.php";
 ?>
 
 <div class="col-9">
 
-    <h4>Registrar asegurado</h4>
 
     <?php $this->showMessages(); ?>
-    <form action="<?php echo constant("URL") ?>asegurados/newAsegurado" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
-        <div class="row mb-3">
-            <label for="nombre" class="col-sm-4 col-form-label">Selecciona un plan</label>
-            <div class="col-sm-8">
-                <select name="planId" class="form-select" required>
-                    <option selected disabled value="">Selecciona un plan</option>
-                    <?php foreach ($planes as $plan) { ?>
-                        <option value="<?php echo $plan->getId(); ?>"><?php echo $plan->getNombre(); ?></option>
-                    <?php } ?>
-                </select>
-            </div>
+    <h3>Registrar Dependiente de: <strong><?php echo $asegurado->getNombre() . " " . $asegurado->getApellidos(); ?></strong></h3>
+    <h5>Plan: <?php echo $asegurado->getPlan()->getNombre(); ?></h5>
 
-        </div>
+    <form action="<?php echo constant("URL") ?>dependiente/newDependiente" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+
+        <input type="hidden" value="<?php echo $asegurado->getId(); ?>" name="aseguradoId">
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Nombre</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="nombre" id="validationCustom01" value="<?php echo $asegurado->getNombre(); ?>" required>
+                <input class="form-control" type="text" name="nombre" id="validationCustom01" required>
             </div>
 
         </div>
@@ -35,7 +25,7 @@ require_once "views/header.php";
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Apellidos</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="apellidos" id="" required value="<?php echo $asegurado->getApellidos(); ?>">
+                <input class="form-control" type="text" name="apellidos" id="" required>
             </div>
 
         </div>
@@ -43,23 +33,21 @@ require_once "views/header.php";
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Dirección</label>
             <div class="col-sm-8">
-                <input class="form-control" type="text" name="direccion" id="" required value="<?php echo $asegurado->getDireccion(); ?>">
+                <input class="form-control" type="text" name="direccion" id="" required>
             </div>
-
         </div>
 
         <div class="row mb-3">
-            <label class="col-sm-4 col-form-label" for="nombre">Teléfono</label>
+            <label class="col-sm-4 col-form-label" for="nombre">Teléfono (7 digitos)</label>
             <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="[0-9]{7}" name="telefono" id="" required value="<?php echo $asegurado->getTelefono(); ?>">
+                <input class="form-control" type="tel" pattern="[0-9]{7}" name="telefono" id="" required>
             </div>
-
         </div>
+
         <div class="row mb-3">
             <label class="col-sm-4 col-form-label" for="nombre">Foto de certificado de nacimiento</label>
             <div class="col-sm-8">
                 <input class="form-control" type="file" name="fotoCertificado" id="" required accept="image/*">
-                <img src="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCertificadoNacimiento() ?>" height="200px">
             </div>
 
         </div>
@@ -67,13 +55,14 @@ require_once "views/header.php";
             <label class="col-sm-4 col-form-label" for="nombre">Foto carnet de identidad</label>
             <div class="col-sm-8">
                 <input class="form-control" type="file" name="fotoCarnet" id="" required accept="image/*">
-                <img src="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCarnetIdentidad() ?>" height="100px">
             </div>
 
         </div>
+
         <p>
             <input type="submit" class="btn btn-primary" value="Registrar">
         </p>
+
     </form>
 </div>
 </div>

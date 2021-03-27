@@ -1,6 +1,6 @@
 <?php
 
-class DependientesModel extends Model implements IModel
+class DependienteModel extends Model implements IModel
 {
     private $id;
     private $nombre;
@@ -17,7 +17,7 @@ class DependientesModel extends Model implements IModel
     public function save()
     {
         try {
-            $query = $this->prepare("INSERT INTO dependiente(asegurado_id, nombre, apellidos, direccion, telefono, foto_certificado_nacimiento, foto_carnet_identidad) 
+            $query = $this->prepare("INSERT INTO dependientes(asegurado_id, nombre, apellidos, direccion, telefono, foto_certificado_nacimiento, foto_carnet_identidad) 
             VALUES(:aseguradoId, :nombre, :apellidos, :direccion, :telefono, :fotoCertificado, :fotoCarnet)");
             $query->execute([
                 "aseguradoId" => $this->aseguradoId,
@@ -27,7 +27,6 @@ class DependientesModel extends Model implements IModel
                 "telefono" => $this->telefono,
                 "fotoCertificado" => $this->fotoCertificadoNacimiento,
                 "fotoCarnet" => $this->fotoCarnetIdentidad,
-                "createAt" => $this->createAt
             ]);
             if ($query->rowCount()) {
                 return true;
@@ -46,7 +45,7 @@ class DependientesModel extends Model implements IModel
         try {
             $query = $this->query("SELECT * FROM dependientes");
             while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
-                $item = new DependientesModel();
+                $item = new DependienteModel();
                 $item->from($p);
                 array_push($items, $item);
             }
@@ -56,10 +55,41 @@ class DependientesModel extends Model implements IModel
             return false;
         }
     }
+    public function getPorAsegurado($id)
+    {
+        $sql = "SELECT * FROM dependientes WHERE asegurado_id=" . $id;
+        $items = [];
+
+        try {
+            $query = $this->query($sql);
+            while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
+                $item = new DependienteModel();
+                $item->from($p);
+                array_push($items, $item);
+            }
+            return $items;
+        } catch (PDOException $e) {
+            error_log("Dependientes_Model::getAll -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+    public function getIdAsegurado($id)
+    {
+        $sql = "SELECT asegurado_id FROM dependientes WHERE id = :id";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute(["id" => $id]);
+            $id = $query->fetchColumn();
+            return $id;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
     public function get($id)
     {
         try {
-            $query = $this->query("SELECT * FROM dependientes WHERE id=:id");
+            $query = $this->prepare("SELECT * FROM dependientes WHERE id=:id");
             $query->execute([
                 "id" => $id
             ]);
@@ -74,7 +104,7 @@ class DependientesModel extends Model implements IModel
     public function delete($id)
     {
         try {
-            $query = $this->query("DELETE FROM dependientes WHERE id=:id");
+            $query = $this->prepare("DELETE FROM dependientes WHERE id=:id");
             $query->execute([
                 "id" => $id
             ]);
@@ -97,7 +127,6 @@ class DependientesModel extends Model implements IModel
                 "telefono" => $this->telefono,
                 "fotoCertificado" => $this->fotoCertificadoNacimiento,
                 "fotoCarnet" => $this->fotoCarnetIdentidad,
-                "createAt" => $this->createAt,
                 "id" => $this->id
             ]);
             if ($query->rowCount()) {

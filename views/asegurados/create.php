@@ -46,9 +46,9 @@ require_once "views/header.php";
         </div>
 
         <div class="row mb-3">
-            <label class="col-sm-4 col-form-label" for="nombre">Teléfono (10 digitos)</label>
+            <label class="col-sm-4 col-form-label" for="nombre">Teléfono (7 digitos)</label>
             <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="[0-9]{10}" name="telefono" id="" required>
+                <input class="form-control" type="tel" pattern="[0-9]{7}" name="telefono" id="" required>
             </div>
         </div>
 
@@ -66,9 +66,14 @@ require_once "views/header.php";
             </div>
 
         </div>
+
         <p>
             <input type="submit" class="btn btn-primary" value="Registrar">
         </p>
+
+
+
+
     </form>
 </div>
 </div>

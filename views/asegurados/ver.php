@@ -1,6 +1,7 @@
 <?php
 $usuario = $this->d["user"];
 $asegurado = $this->d["asegurado"];
+$dependientes = $this->d["dependientes"];
 require_once "views/header.php";
 ?>
 
@@ -47,8 +48,36 @@ require_once "views/header.php";
                     <a href="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCarnetIdentidad() ?>" data-lightbox="Carnet" data-title="Carnet de identidad del asegurado">
                         <img src="<?php echo constant("URL") . "public/img/" . $asegurado->getFotoCarnetIdentidad() ?>" height="100px" class="rounded">
                     </a>
-
                 </div>
+            </div>
+
+            <div class="row mt-3">
+                <h4>Lista de asociados</h4>
+                <table class="table" <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($dependientes as $dependiente) { ?>
+                            <tr>
+                                <td><?php echo $dependiente->getNombre(); ?></td>
+                                <td><?php echo $dependiente->getApellidos(); ?></td>
+                                <td><?php echo $dependiente->getTelefono(); ?></td>
+                                <td><?php echo $dependiente->getDireccion(); ?></td>
+                                <td>
+                                    <a href="<?php echo constant("URL") ?>dependiente/ver/<?php echo $asegurado->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
+
             </div>
         </div>
     </div>
