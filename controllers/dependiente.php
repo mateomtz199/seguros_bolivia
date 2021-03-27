@@ -174,7 +174,7 @@ class Dependiente extends SessionController
         $asegurado = new AseguradosModel();
         $numero = $asegurado->numeroDependientes($id);
         if ($numero >= 3) {
-            $this->redirect("dashboard", []); //Ya no se aceptan más
+            $this->redirect("dashboard", ["error" => ErrorMessages::ASEGURADO_COMPLETO_DEPENDIENTES]);
         } else {
             $this->view->render("dependiente/crear", [
                 "user" => $this->user,
