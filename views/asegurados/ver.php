@@ -53,6 +53,9 @@ require_once "views/header.php";
 
             <div class="row mt-3">
                 <h4>Lista de asociados</h4>
+                <?php
+                $this->showMessages();
+                ?>
                 <div class="text-end">
                     <a href="<?php echo constant("URL") ?>dependiente/crear/<?php echo $asegurado->getId(); ?>" class="btn btn-warning">Agregar afiliado</a>
                 </div>

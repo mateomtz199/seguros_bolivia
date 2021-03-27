@@ -139,6 +139,7 @@ class DependienteModel extends Model implements IModel
             return false;
         }
     }
+
     public function from($array)
     {
         $this->id = $array["id"];
