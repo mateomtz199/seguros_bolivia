@@ -106,8 +106,6 @@ class AseguradosModel extends Model implements IModel
                     ON a.plan_id = p.id
                     WHERE a.id = :id";
 
-        $items = [];
-
         try {
             $query = $this->prepare($sql);
             $query->execute(["id" => $id]);
@@ -201,6 +199,49 @@ class AseguradosModel extends Model implements IModel
         $this->createAt = $array["create_at"];
     }
 
+    //Dashboard
+    public function cantidadPorPlan()
+    {
+        $sql = "SELECT p.nombre, COUNT(*) as cantidad 
+        FROM asegurados a 
+        INNER JOIN planes p ON a.plan_id = p.id 
+        GROUP BY a.plan_id;";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute();
+            $resultado = $query->fetchAll();
+            return $resultado;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::cantidadPorPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+    public function cantidadAsegurados()
+    {
+        $sql = "SELECT COUNT(*) as cantidad_asegurados FROM asegurados;";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute();
+            $numero = $query->fetchColumn();
+            return $numero;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+    public function cantidadDependientes()
+    {
+        $sql = "SELECT COUNT(*) as cantidad_afiliados FROM dependientes;";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute();
+            $numero = $query->fetchColumn();
+            return $numero;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
 
     public function getId()
     {

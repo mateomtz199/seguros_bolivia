@@ -1,6 +1,9 @@
 <?php
 $asegurados = $this->d["asegurados"];
 $usuario = $this->d["user"];
+$planesCantidad = $this->d["planesCantidad"];
+$cantidadAsegurados = $this->d["cantidadAsegurados"];
+$cantidadDependientes = $this->d["cantidadDependientes"];
 
 require_once "views/header.php";
 ?>
@@ -10,45 +13,93 @@ require_once "views/header.php";
 <div class="col-9">
     <h3>Dashboard</h3>
     <hr>
-    <?php
-    $this->showMessages();
-    ?>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Plan</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($asegurados as $asegurado) { ?>
-                <tr>
-                    <td><?php echo $asegurado->getNombre(); ?> </td>
-                    <td><?php echo $asegurado->getApellidos(); ?></td>
-                    <td><?php echo $asegurado->getDireccion(); ?></td>
-                    <td><?php echo $asegurado->getTelefono(); ?></td>
-                    <td><?php echo $asegurado->getNombrePlan(); ?></td>
-                    <td>
-                        <div class="btn-group" role="group">
-                            <a href="<?php echo constant("URL") ?>asegurados/ver/<?php echo $asegurado->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
-                            <a href="<?php echo constant("URL") ?>asegurados/editar/<?php echo $asegurado->getId(); ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
-                            <a href="<?php echo constant("URL") ?>asegurados/eliminar/<?php echo $asegurado->getId(); ?>" onclick="return confirm('¿Estas seguro?');" class="btn btn-danger">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
+
+
+    <div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <?php
+            foreach ($planesCantidad as $plan) {
+            ?>
+                <div class="col">
+                    <div class="card text-white bg-success mb-2">
+                        <div class="card-header text-center"><?php echo $plan["nombre"]; ?></div>
+                        <div class="card-body">
+                            <h1 class="card-title">
+                                <p class="text-center"><?php echo $plan["cantidad"]; ?></p>
+                            </h1>
+                            <p class="card-text text-center">Asegurados</p>
                         </div>
-                        <a href="<?php echo constant("URL") ?>dependiente/crear/<?php echo $asegurado->getId(); ?>" class="btn btn-warning">Agregar dependiente</a>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card text-white bg-primary mb-2">
+                <div class="card-header text-center">Total de asegurados</div>
+                <div class="card-body">
+                    <h1 class="card-title">
+                        <p class="text-center"><?php echo $cantidadAsegurados; ?></p>
+                    </h1>
 
-                    </td>
-                </tr>
-            <?php } ?>
-        </tbody>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary mb-2">
+                <div class="card-header text-center">Total de afiliados</div>
+                <div class="card-body">
+                    <h1 class="card-title">
+                        <p class="text-center">
+                            <?php echo $cantidadDependientes; ?></p>
+                    </h1>
 
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<?php
+$this->showMessages();
+?>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Plan</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($asegurados as $asegurado) { ?>
+            <tr>
+                <td><?php echo $asegurado->getNombre(); ?> </td>
+                <td><?php echo $asegurado->getApellidos(); ?></td>
+                <td><?php echo $asegurado->getDireccion(); ?></td>
+                <td><?php echo $asegurado->getTelefono(); ?></td>
+                <td><?php echo $asegurado->getNombrePlan(); ?></td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a href="<?php echo constant("URL") ?>asegurados/ver/<?php echo $asegurado->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
+                        <a href="<?php echo constant("URL") ?>asegurados/editar/<?php echo $asegurado->getId(); ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="<?php echo constant("URL") ?>asegurados/eliminar/<?php echo $asegurado->getId(); ?>" onclick="return confirm('¿Estas seguro?');" class="btn btn-danger">
+                            <i class="bi bi-trash-fill"></i>
+                        </a>
+                    </div>
+                    <a href="<?php echo constant("URL") ?>dependiente/crear/<?php echo $asegurado->getId(); ?>" class="btn btn-warning">Agregar dependiente</a>
+
+                </td>
+            </tr>
+        <?php } ?>
+    </tbody>
+
+</table>
 </div>
 
 
