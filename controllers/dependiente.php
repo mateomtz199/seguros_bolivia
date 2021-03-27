@@ -47,6 +47,7 @@ class Dependiente extends SessionController
         if (!$upLoadOk) {
             $this->redirect("dashboard", []);
         }
+        move_uploaded_file($fotoCertificado["tmp_name"], $targetFile);
 
         $fotoCarnet = $_FILES["fotoCarnet"];
         $urlImages = "public/img/";
@@ -67,7 +68,7 @@ class Dependiente extends SessionController
         if (!$upLoadOk) {
             $this->redirect("dashboard", []);
         } else {
-            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile) && move_uploaded_file($fotoCertificado["tmp_name"], $targetFile)) {
+            if (move_uploaded_file($fotoCarnet["tmp_name"], $targetFile)) {
 
                 $aseguradoId = $this->getPost("aseguradoId");
 
@@ -204,6 +205,8 @@ class Dependiente extends SessionController
 
             $asegurado = new AseguradosModel();
 
+            error_log("Metodo del controller editar: " . $aseguradoId);
+
             $this->view->render("asegurados/ver", [
                 "user" => $this->user,
                 "asegurado" => $asegurado->getWithPlan($aseguradoId),
@@ -243,7 +246,7 @@ class Dependiente extends SessionController
         $this->view->render("dependiente/ver", [
             "user" => $this->user,
             "dependiente" => $dependiente->get($id),
-            "asegurado" => $asegurado->get($aseguradoId)
+            "asegurado" => $asegurado->getWithPlan($aseguradoId),
         ]);
     }
 }

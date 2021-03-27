@@ -1,0 +1,74 @@
+[27-Mar-2021 03:48:30 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:30 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dashboard, url => dashboard
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::isPublic(): currentURL => dashboard
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dashboard, url => dashboard
+[27-Mar-2021 03:48:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:30 Europe/Berlin] Dashboard::Inicio de login
+[27-Mar-2021 03:48:31 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:31 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/crear/1, url => dependiente
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::isPublic(): currentURL => dependiente
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/crear/1, url => dependiente
+[27-Mar-2021 03:48:31 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:31 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:31 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:31 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dashboard, url => dashboard
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::isPublic(): currentURL => dashboard
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dashboard, url => dashboard
+[27-Mar-2021 03:48:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:32 Europe/Berlin] Dashboard::Inicio de login
+[27-Mar-2021 03:48:35 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:35 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/ver/1, url => asegurados
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/ver/1, url => asegurados
+[27-Mar-2021 03:48:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:35 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:35 Europe/Berlin] Plan nombre: Plan Básico
+[27-Mar-2021 03:48:38 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:38 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:38 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:38 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/3, url => dependiente
+[27-Mar-2021 03:48:38 Europe/Berlin] sessionController::isPublic(): currentURL => dependiente
+[27-Mar-2021 03:48:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/3, url => dependiente
+[27-Mar-2021 03:48:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:39 Europe/Berlin] Metodo del controller editar: 1
+[27-Mar-2021 03:48:39 Europe/Berlin] Plan nombre: Plan Básico
+[27-Mar-2021 03:48:45 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:48:45 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:48:45 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:46 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:48:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/2, url => dependiente
+[27-Mar-2021 03:48:46 Europe/Berlin] sessionController::isPublic(): currentURL => dependiente
+[27-Mar-2021 03:48:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/2, url => dependiente
+[27-Mar-2021 03:48:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:48:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:48:46 Europe/Berlin] PHP Warning:  unlink(public/img/4f0bf63954aca83f790d1bd8579d33bb.jpg): No such file or directory in C:\xampp\htdocs\seguros_bolivia\controllers\dependiente.php on line 204
+[27-Mar-2021 03:48:46 Europe/Berlin] Metodo del controller editar: 1
+[27-Mar-2021 03:48:46 Europe/Berlin] Plan nombre: Plan Básico
+[27-Mar-2021 03:49:05 Europe/Berlin] Prueba de errores
+[27-Mar-2021 03:49:05 Europe/Berlin] SessionController::validateSession()
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/1, url => dependiente
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::isPublic(): currentURL => dependiente
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/dependiente/eliminar/1, url => dependiente
+[27-Mar-2021 03:49:05 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[27-Mar-2021 03:49:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[27-Mar-2021 03:49:06 Europe/Berlin] PHP Warning:  unlink(public/img/c5cf583de7b89225d1d3c64dc0bb8e91.jpg): No such file or directory in C:\xampp\htdocs\seguros_bolivia\controllers\dependiente.php on line 204
+[27-Mar-2021 03:49:06 Europe/Berlin] Metodo del controller editar: 1
+[27-Mar-2021 03:49:06 Europe/Berlin] Plan nombre: Plan Básico

@@ -7,7 +7,7 @@ require_once "views/header.php";
 
 <div class="col-9">
 
-    <h4>Datos del afiliado de <?php echo $asegurado->getNombre() . $asegurado->getApellidos(); ?></h4>
+    <h4>Datos del afiliado de <?php echo $asegurado->getNombre() . " " . $asegurado->getApellidos(); ?></h4>
 
     <?php $this->showMessages(); ?>
     <div class="card text-dark bg-light mb-12">

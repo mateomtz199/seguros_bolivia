@@ -70,7 +70,9 @@ require_once "views/header.php";
                                 <td><?php echo $dependiente->getTelefono(); ?></td>
                                 <td><?php echo $dependiente->getDireccion(); ?></td>
                                 <td>
-                                    <a href="<?php echo constant("URL") ?>dependiente/ver/<?php echo $asegurado->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
+                                    <a href="<?php echo constant("URL") ?>dependiente/ver/<?php echo $dependiente->getId(); ?>" class="btn btn-primary"><i class="bi bi-search"></i></a>
+                                    <a href="<?php echo constant("URL") ?>dependiente/editar/<?php echo $dependiente->getId(); ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+                                    <a href="<?php echo constant("URL") ?>dependiente/eliminar/<?php echo $dependiente->getId(); ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                                 </td>
                             </tr>
                         <?php } ?>
