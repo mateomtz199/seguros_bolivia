@@ -11,40 +11,52 @@ require_once "views/header.php";
     <div>
         <div class="card">
             <div class="card-body">
-                <form action="" method="post">
+                <form action="" method="post" class="row g-3">
                     <input type="hidden" name="aseguradoId" id="aseguradoId">
-                    <div class="row mb-3">
-                        <label class="col-sm-4 col-form-label" for="nombre">Nombre</label>
-                        <div class="col-sm-8">
-                            <input class="form-control" type="text" name="nombre" id="cliente" required>
-                        </div>
+
+
+                    <div class="col-md-6">
+                        <label for="Selecciona un asegurado" class="form-label"><strong>Selecciona un asegurado</strong></label>
+                        <input type="text" class="form-control" id="cliente" name="nombre" required>
                     </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="nombre">Plan asigando</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" name="nombre" id="plan" required>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="nombre">Costo mensual</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" name="nombre" id="precio" required>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="nombre">Dependientes</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" name="nombre" id="dependientes" required>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="nombre">Precio dependiente</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" name="nombre" id="precioDependiente" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label for="Plan asignado" class="form-label">Plan asignado</label>
+                        <input type="text" class="form-control" name="plan" id="plan" required disabled>
                     </div>
 
+                    <div class="col-md-4">
+                        <label for="Costo mensual" class="form-label">Costo mensual</label>
+                        <input type="text" class="form-control" name="precio" id="precio" required disabled>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Dependientes" class="form-label">Dependientes</label>
+                        <input type="text" class="form-control" name="dependientes" id="dependientes" required disabled>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Precio dependiente" class="form-label">Precio dependiente</label>
+                        <input type="text" class="form-control" name="precioDependiente" id="precioDependiente" required disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Meses pendiente de pago" class="form-label">Meses pendiente de pago</label>
+                        <input type="text" class="form-control" name="mesPendiente" id="mesPendiente" required disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Último mes de pago" class="form-label">Último mes de pago</label>
+                        <input type="text" class="form-control" name="ultimoMes" id="ultimoMes" required disabled>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Número de meses a pagar" class="form-label"><strong>Número de meses a pagar</strong></label>
+                        <input type="number" class="form-control" name="nMesPagar" id="nMesPagar" required>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Realizar pago</button>
+                    </div>
                 </form>
             </div>
         </div>

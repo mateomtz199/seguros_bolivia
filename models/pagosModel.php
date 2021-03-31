@@ -35,6 +35,39 @@ class PagosModel extends Model
             return false;
         }
     }
+    public function mesPendiente($id)
+    {
+        $sql = "SELECT 
+        TIMESTAMPDIFF(MONTH, mes_pago, CURDATE()) AS meses_transcurridos FROM pagos 
+        WHERE asegurado_id=:id GROUP BY id DESC LIMIT 1";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute(["id" => $id]);
+            $numero = $query->fetchColumn();
+            return $numero;
+        } catch (PDOException $e) {
+            error_log("Pagos_Model::Mes pendiente -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+    public function fechaVencimiento($id)
+    {
+        $sql = "SELECT mes_pago 
+                    FROM pagos 
+                    WHERE asegurado_id=:id 
+                    GROUP BY id 
+                    DESC LIMIT 1";
+        try {
+            $query = $this->prepare($sql);
+            $query->execute(["id" => $id]);
+            $numero = $query->fetchColumn();
+            return $numero;
+        } catch (PDOException $e) {
+            error_log("Pagos_Model::fechaVencimiento -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+
 
 
     public function getId()

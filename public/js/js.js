@@ -20,6 +20,8 @@ $(document).ready(function () {
                                 precio: item.precio,
                                 dependientes: item.dependientes,
                                 precioDep: item.precioDependiente,
+                                mesPendiente: item.numeroMesPendiente,
+                                ultimoMes: item.ultimoPagoMes,
                             };
                         })
                     );
@@ -32,6 +34,8 @@ $(document).ready(function () {
             $('#precio').val(ui.item.precio);
             $('#dependientes').val(ui.item.dependientes);
             $('#precioDependiente').val(ui.item.precioDep);
+            $('#mesPendiente').val(ui.item.mesPendiente);
+            $('#ultimoMes').val(ui.item.ultimoMes);
         },
     });
 });

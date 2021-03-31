@@ -1,4 +1,5 @@
 <?php
+require_once "models/pagosModel.php";
 class AseguradosModel extends Model implements IModel
 {
     private $id;
@@ -131,12 +132,9 @@ class AseguradosModel extends Model implements IModel
         LEFT JOIN planes p 
         ON a.plan_id = p.id
         WHERE a.nombre LIKE '%" . $valor . "%';";
-
         $items = array();
-
-        $numeroDependientes = $this->numeroDependientes($valor);
-
         try {
+            $pagos = new PagosModel();
             $query = $this->query($sql);
             while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
                 $items[] = array(
@@ -145,7 +143,9 @@ class AseguradosModel extends Model implements IModel
                     "plan" => $p["nombre_plan"],
                     "precio" => $p["precio"],
                     "precioDependiente" => $p["precio_dependiente"],
-                    "dependientes" => $numeroDependientes,
+                    "dependientes" => $this->numeroDependientes($p["id_asegurado"]),
+                    "numeroMesPendiente" => $pagos->mesPendiente($p["id_asegurado"]),
+                    "ultimoPagoMes" => $pagos->fechaVencimiento($p["id_asegurado"])
                 );
             }
             return $items;
@@ -181,6 +181,7 @@ class AseguradosModel extends Model implements IModel
             return false;
         }
     }
+
     public function update()
     {
         try {
