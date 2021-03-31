@@ -124,3 +124,795 @@
 [31-Mar-2021 22:44:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
 [31-Mar-2021 22:44:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
 [31-Mar-2021 22:44:09 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:56:16 Europe/Berlin] Prueba de errores
+[31-Mar-2021 22:56:16 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 22:56:16 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:56:16 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 22:56:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 22:56:17 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 22:56:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 22:56:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 22:56:17 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:57:17 Europe/Berlin] Prueba de errores
+[31-Mar-2021 22:57:17 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 22:57:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 22:57:17 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:57:21 Europe/Berlin] Prueba de errores
+[31-Mar-2021 22:57:21 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 22:57:21 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 22:57:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:03 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:07:03 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:07:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:07:03 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:12 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:07:12 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:07:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:07:12 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:41 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:07:41 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:07:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:07:41 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:46 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:07:46 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:07:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:07:47 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:07:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:07:47 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:07:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:07:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:07:47 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:09:25 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:09:25 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:09:25 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:09:25 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:09:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:09:25 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:09:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:09:26 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:09:26 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:21 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:13:21 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:13:21 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:13:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:25 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:13:25 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:13:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:13:25 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:35 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:13:35 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:13:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:13:35 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:18 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:15:18 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:15:18 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:15:18 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:22 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:15:22 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:15:22 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:15:22 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:30 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:15:31 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:15:31 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:15:31 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:22:11 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:22:11 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:22:11 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:22:11 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:22:32 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:22:32 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:22:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:22:32 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:22:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:22:33 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:22:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:22:33 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:22:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:26:40 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:26:40 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:26:40 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:26:40 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:26:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:26:40 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:26:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:26:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:26:41 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:26:45 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:26:45 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:26:45 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:26:45 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:26:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:26:45 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:26:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:26:45 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:26:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:10 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:29:10 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:29:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:29:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:14 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:29:14 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:29:14 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:14 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:29:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:29:14 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:29:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:29:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:29:15 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:33 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:29:33 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:29:33 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:29:33 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:33 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/12%2012?term=12%2012, url => asegurados
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/12%2012?term=12%2012, url => asegurados
+[31-Mar-2021 23:29:33 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:29:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:37 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:29:37 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:29:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:29:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:31:37 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:31:37 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:31:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:31:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:31:39 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:31:39 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:31:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:31:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:24 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:32:24 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:32:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:32:24 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:26 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:32:26 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[31-Mar-2021 23:32:26 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:32:26 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:39 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:32:39 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[31-Mar-2021 23:32:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:32:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:34:30 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:34:30 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/2?term=2, url => asegurados
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/2?term=2, url => asegurados
+[31-Mar-2021 23:34:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:34:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:34:33 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:34:33 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[31-Mar-2021 23:34:33 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:34:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:44:32 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:44:32 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:44:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:44:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:56:45 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:56:45 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:56:45 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:56:45 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:56:52 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:56:52 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:56:52 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:56:52 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:58:15 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:58:15 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[31-Mar-2021 23:58:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:58:15 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:58:20 Europe/Berlin] Prueba de errores
+[31-Mar-2021 23:58:20 Europe/Berlin] SessionController::validateSession()
+[31-Mar-2021 23:58:20 Europe/Berlin] sessionController::getUserSessionData(): admin
+[31-Mar-2021 23:58:20 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[31-Mar-2021 23:58:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:58:20 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[31-Mar-2021 23:58:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[31-Mar-2021 23:58:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[31-Mar-2021 23:58:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:00:46 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:00:46 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:00:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:00:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:00:49 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:00:49 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:00:49 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:00:49 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:01:27 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:01:27 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:01:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:01:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:02:05 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:02:05 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:02:05 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:02:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:02:10 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:02:10 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:02:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:02:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:13:17 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:13:17 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:13:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:13:17 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:13:27 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:13:27 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:13:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:13:27 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:13:28 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:13:28 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:13:28 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:13:28 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:13:28 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:07 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:14:07 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:14:07 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:14:08 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:08 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:14:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:08 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:14:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:14:09 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:09 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:14:09 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:09 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:14:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:14:09 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:14:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:14:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:14:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:14 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:14:14 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:14 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:14:14 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:39 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:14:39 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:14:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:14:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:46 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:14:46 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:14:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:14:47 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:14:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:47 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:14:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:14:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:14:47 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:12 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:15:12 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:15:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:15:12 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:16 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:15:16 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:15:16 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:15:16 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:32 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:15:32 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:15:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:15:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:34 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:15:34 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:15:34 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:15:34 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:16:54 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:16:54 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:16:54 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:16:54 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:16:59 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:16:59 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:16:59 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:16:59 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:03 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:17:03 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:17:03 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:03 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:17:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:17:04 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:17:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:17:04 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:17:04 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:06 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:17:07 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:17:07 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:17:07 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:09 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:17:09 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:17:09 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:09 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:17:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:17:09 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:17:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:17:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:10 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:17:10 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:17:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:17:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:32 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:18:32 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:18:33 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:18:33 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:39 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:18:39 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:18:39 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:40 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:18:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:18:40 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:18:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:18:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:18:40 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:46 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:18:46 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:18:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:18:46 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:49 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:18:49 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:18:49 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:18:49 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:30 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:19:30 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:19:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:19:30 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:34 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:19:34 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:19:34 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:34 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:19:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/m?term=m, url => asegurados
+[01-Apr-2021 00:19:35 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:19:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/m?term=m, url => asegurados
+[01-Apr-2021 00:19:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:19:35 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:36 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:19:37 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:37 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:19:37 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:19:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:19:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:25:27 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:25:27 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:25:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:25:27 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:25:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:25:27 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:25:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:25:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:25:28 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:25:32 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:25:32 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/ped?term=ped, url => asegurados
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/ped?term=ped, url => asegurados
+[01-Apr-2021 00:25:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:25:32 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:37 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:31:37 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:31:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:31:37 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:53 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:31:53 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/%3C?term=%3C, url => asegurados
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/%3C?term=%3C, url => asegurados
+[01-Apr-2021 00:31:53 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:31:53 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:56 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:31:56 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/a?term=a, url => asegurados
+[01-Apr-2021 00:31:56 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:31:56 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:32:27 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:32:27 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:32:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:32:27 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:32:28 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:32:28 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/1?term=1, url => asegurados
+[01-Apr-2021 00:32:28 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:32:28 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:35:24 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:35:24 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:35:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:35:24 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:10 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:37:10 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:37:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:11 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:37:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:37:11 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:37:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:37:11 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:37:11 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:15 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:37:15 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:37:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:37:15 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:18 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:37:18 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Juan%7C%20Mart%C3%ADne?term=Juan%7C%20Mart%C3%ADne, url => asegurados
+[01-Apr-2021 00:37:18 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:37:18 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:21 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:37:21 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:37:21 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:21 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:37:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:37:21 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:37:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pe?term=pe, url => asegurados
+[01-Apr-2021 00:37:22 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:37:22 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:56 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:37:56 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:37:56 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:37:56 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:37:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:37:57 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:37:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:37:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:37:57 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:38:02 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:38:02 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:38:02 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:38:02 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:38:07 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:38:07 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:38:07 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:38:07 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:34 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:39:34 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:39:34 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:39:34 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:38 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:39:38 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:39:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:39:38 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:44 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:39:44 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/p?term=p, url => asegurados
+[01-Apr-2021 00:39:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:39:44 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:48 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:39:48 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/j?term=j, url => asegurados
+[01-Apr-2021 00:39:48 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:39:48 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:05 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:40:05 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::isPublic(): currentURL => pagos
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/pagos, url => pagos
+[01-Apr-2021 00:40:05 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:40:05 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:10 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:40:10 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/ped?term=ped, url => asegurados
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/ped?term=ped, url => asegurados
+[01-Apr-2021 00:40:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:40:10 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:11 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:40:11 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Pedro%20V%C3%A1zq?term=Pedro%20V%C3%A1zq, url => asegurados
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/Pedro%20V%C3%A1zq?term=Pedro%20V%C3%A1zq, url => asegurados
+[01-Apr-2021 00:40:11 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:40:11 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:16 Europe/Berlin] Prueba de errores
+[01-Apr-2021 00:40:16 Europe/Berlin] SessionController::validateSession()
+[01-Apr-2021 00:40:16 Europe/Berlin] sessionController::getUserSessionData(): admin
+[01-Apr-2021 00:40:16 Europe/Berlin] sessionController::validateSession(): username:admin - role: user
+[01-Apr-2021 00:40:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:40:17 Europe/Berlin] sessionController::isPublic(): currentURL => asegurados
+[01-Apr-2021 00:40:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/seguros_bolivia/asegurados/aseguradosJSON/pedr?term=pedr, url => asegurados
+[01-Apr-2021 00:40:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[01-Apr-2021 00:40:17 Europe/Berlin] sessionController::getUserSessionData(): admin
