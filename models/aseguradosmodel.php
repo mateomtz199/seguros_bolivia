@@ -122,6 +122,39 @@ class AseguradosModel extends Model implements IModel
             return false;
         }
     }
+    public function getWithPlanJson($valor)
+    {
+
+        $sql = "SELECT 
+        a.id as id_asegurado, a.nombre as nombre_asegurado, a.apellidos, p.nombre as nombre_plan, p.precio, p.precio_dependiente 
+        FROM asegurados a 
+        LEFT JOIN planes p 
+        ON a.plan_id = p.id
+        WHERE a.nombre LIKE '%" . $valor . "%';";
+
+        $items = array();
+
+        $numeroDependientes = $this->numeroDependientes($valor);
+
+        try {
+            $query = $this->query($sql);
+            while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
+                $items[] = array(
+                    "id" => $p["id_asegurado"],
+                    "nombre" => $p["nombre_asegurado"] . " " . $p["apellidos"],
+                    "plan" => $p["nombre_plan"],
+                    "precio" => $p["precio"],
+                    "precioDependiente" => $p["precio_dependiente"],
+                    "dependientes" => $numeroDependientes,
+                );
+            }
+            return $items;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::getAllWithPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+
     public function delete($id)
     {
         try {

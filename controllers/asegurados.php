@@ -217,4 +217,14 @@ class Asegurados extends SessionController
             "dependientes" => $dependientes->getPorAsegurado($id)
         ]);
     }
+    public function aseguradosJSON($parametros)
+    {
+        $valor = $parametros[0];
+        header('Content-Type: application/json');
+
+        $asegurado = new AseguradosModel();
+        $json = $asegurado->getWithPlanJson($valor);
+
+        echo json_encode($json);
+    }
 }

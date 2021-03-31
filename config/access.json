@@ -31,6 +31,11 @@
             "role": "user"
         },
         {
+            "site": "pagos",
+            "access": "private",
+            "role": "user"
+        },
+        {
             "site": "admin",
             "access": "private",
             "role": "admin"

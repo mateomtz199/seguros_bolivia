@@ -27,7 +27,6 @@ require_once "views/header.php";
             <div class="col-sm-8">
                 <input class="form-control" type="text" name="nombre" id="validationCustom01" required>
             </div>
-
         </div>
 
         <div class="row mb-3">
