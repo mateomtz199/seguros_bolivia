@@ -111,9 +111,8 @@
                             </td>
 
                             <td>
-                                Factura #: <?php echo $hola; ?><br />
-                                Creado: January 1, 2015<br />
-                                Vence: February 1, 2015
+                                Factura #: <?php echo $id; ?><br />
+                                Creado: <?php echo $fechaPago; ?><br />
                             </td>
                         </tr>
                     </table>
@@ -159,7 +158,7 @@
             </tr>
 
             <tr class="item">
-                <td>Website design</td>
+                <td><?php echo $fechaPago; ?></td>
 
                 <td>$300.00</td>
             </tr>

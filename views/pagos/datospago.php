@@ -36,6 +36,7 @@ require_once "views/header.php";
                 <input type="hidden" name="nMes" id="nMes" value="<?php echo $nMes; ?>">
                 <input type="hidden" name="nDependiente" id="nDependiente" value="<?php echo $nDependiente; ?>">
                 <input type="hidden" name="precioDependiente" id="precioDependiente" value="<?php echo $precioDependiente; ?>">
+                <input type="hidden" name="nombreAseg" id="nombreAseg" value="<?php echo $nombreAseg; ?>">
                 <div class="col text-center">
                     <button type="submit" class="btn btn-primary">Realizar pago</button>
                 </div>

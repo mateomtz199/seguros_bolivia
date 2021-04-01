@@ -69,6 +69,7 @@ class Pagos extends SessionController
         $nMes = $this->getPost("nMes");
         $nDependiente = $this->getPost("nDependiente");
         $precioDependiente = $this->getPost("precioDependiente");
+        $nombreAseg = $this->getPost("nombreAseg");
         $pagos = new PagosModel();
         $pagos->setAseguradoId($id);
         $pagos->setFechaPago($fechaPago);
@@ -78,11 +79,30 @@ class Pagos extends SessionController
         $pagos->save();
         //Llamar factura
 
-        $this->redirect("pagos", []);
+        $this->view->render("pagos/postpago", [
+            "user" => $this->user,
+            "id" => $id,
+            "nombreAseg" => $nombreAseg,
+            "fechaPago" => $fechaPago,
+            "mesPago" => $mesPago,
+            "cantidad" => $cantidad,
+            "factura" => $factura,
+            "nMes" => $nMes,
+            "nDependiente" => $nDependiente,
+            "precioDependiente" => $precioDependiente,
+        ]);
     }
-    public function factura($id, $fechaPago, $mesPago, $cantidad, $factura, $nMes, $nDependiente, $precioDependiente)
+    public function factura()
     {
-
+        $id = $this->getPost("aseguradoId");
+        $fechaPago = $this->getPost("fechaPago");
+        $mesPago = $this->getPost("mesPago");
+        $cantidad = $this->getPost("cantidad");
+        $factura = $this->getPost("factura");
+        $nMes = $this->getPost("nMes");
+        $nDependiente = $this->getPost("nDependiente");
+        $precioDependiente = $this->getPost("precioDependiente");
+        $nombreAseg = $this->getPost("nombreAseg");
         $this->view->render("factura/generarFacturar", [
             "user" => $this->user,
             "id" => $id,
@@ -91,7 +111,9 @@ class Pagos extends SessionController
             "mesPago" => $mesPago,
             "cantidad" => $cantidad,
             "factura" => $factura,
-            "nMes" => $nMes
+            "nMes" => $nMes,
+            "nDependiente" => $nDependiente,
+            "precioDependiente" => $precioDependiente,
         ]);
     }
 }
