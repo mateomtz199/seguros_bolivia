@@ -11,12 +11,14 @@ require_once "views/header.php";
     <div>
         <div class="card">
             <div class="card-body">
-                <form action="" method="post" class="row g-3 needs-validation" novalidate>
+                <form method="post" action="<?php echo constant("URL") ?>pagos/mostrarDatosPago" class="row g-3 needs-validation" novalidate>
                     <input type="hidden" name="aseguradoId" id="aseguradoId">
+                    <input type="hidden" name="nombreAseg" id="nombreAseg">
                     <input type="hidden" name="fechaPago" id="fechaPago">
                     <input type="hidden" name="mesPago" id="mesPago">
                     <input type="hidden" name="cantidad" id="cantidad">
                     <input type="hidden" name="factura" id="factura">
+                    <input type="hidden" name="nMes" id="nMes">
 
 
                     <div class="col-md-6">

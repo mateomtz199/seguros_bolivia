@@ -4,6 +4,8 @@ $(document).ready(function () {
     let nDependientes;
     let ultimaFecha;
     let nMes;
+    let nombreAsegurado;
+    let plan;
     $('#cliente').autocomplete({
         source: function (request, response) {
             $.ajax({
@@ -45,6 +47,9 @@ $(document).ready(function () {
             nDependientes = ui.item.dependientes;
             ultimaFecha = itemsHelper.mesPendiente(ui.item.ultimoMes);
 
+            nombreAsegurado = ui.item.value;
+            plan = ui.item.plan;
+
             let nmes = itemsHelper.mesPendientePago(ui.item.mesPendiente);
             $('#ultimoMes').val(ultimaFecha);
             $('#mesPendiente').val(nmes);
@@ -63,6 +68,15 @@ $(document).ready(function () {
         );
         itemsHelper.granTotal();
         itemsHelper.fechaTermino();
+
+        //Asignar a parametros
+        $('#nombreAseg').val(nombreAsegurado);
+        $('#mesPago').val(itemsHelper.fechaTermino());
+        $('#cantidad').val(itemsHelper.granTotal());
+        $('#factura').val(itemsHelper.facturaPlantilla());
+        $('#factura').val(itemsHelper.facturaPlantilla());
+        $('#fechaPago').val(moment().format('YYYY-MM-DD'));
+        $('#nMes').val(nMes);
     });
 
     var itemsHelper = {
@@ -80,17 +94,25 @@ $(document).ready(function () {
             $('#mesTermino').text('');
             $('#primerMesPago').text('');
             $('#primerPago').text('');
+            $('#fechaPago').val('');
+            $('#mesPago').val('');
+            $('#cantidad').val('');
+            $('#factura').val('');
+            $('#nombreAseg').val('');
+            $('#nMes').val('');
         },
         granTotal: function () {
             let subAseg = $('#subTotalAsegurado').val();
             let subDep = $('#subTotalDependientes').val();
             let total = subAseg * 1 + subDep * 1;
             $('#granTotal').text('$ ' + total);
+            return total;
         },
         fechaTermino: function () {
             let inicio = moment(ultimaFecha);
             let final = inicio.add(nMes, 'months');
-            $('#mesTermino').text(final.format('DD-MM-YYYY'));
+            $('#mesTermino').text(final.format('YYYY-MM-DD'));
+            return final.format('YYYY-MM-DD');
         },
         mesPendiente: function (mes) {
             if (mes) {
@@ -101,7 +123,12 @@ $(document).ready(function () {
             }
         },
         mesPendientePago: function (nMes) {
-            if (nMes) {
+            if (nMes < 0) {
+                $('#primerPago').text(
+                    'Tienes meses pagados adelantados: ' + nMes * -1
+                );
+                return 0;
+            } else if (nMes > 0) {
                 return nMes;
             } else {
                 $('#primerPago').text(
@@ -109,6 +136,25 @@ $(document).ready(function () {
                 );
                 return 0;
             }
+        },
+        facturaPlantilla: function () {
+            return (
+                '[Asegurado: ' +
+                nombreAsegurado +
+                ', Plan: ' +
+                plan +
+                ', Costo x mes: ' +
+                costoMensualAsegurado +
+                ', Dependientes: ' +
+                nDependientes +
+                ', Último mes: ' +
+                ultimaFecha +
+                ', Fecha termino: ' +
+                this.fechaTermino() +
+                ', meses pagados: ' +
+                nMes +
+                ']'
+            );
         },
     };
 });

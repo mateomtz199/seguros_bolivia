@@ -35,6 +35,7 @@ class PagosModel extends Model
             return false;
         }
     }
+
     public function mesPendiente($id)
     {
         $sql = "SELECT 

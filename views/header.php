@@ -84,15 +84,16 @@
                                 Ver planes
                             </a>
                         </li>
-                        <hr>
+
                         <li>
-                            <a href="<?php echo constant("URL") . "pagos"; ?>" class="nav-link text-white">
+                            <a href="<?php echo constant("URL") . "pagos/create"; ?>" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle" />
                                 </svg>
                                 Pagos
                             </a>
                         </li>
+                        <hr>
                         <li>
                             <a href="#" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
