@@ -6,6 +6,7 @@ $(document).ready(function () {
     let nMes;
     let nombreAsegurado;
     let plan;
+    let precioDependiente;
     $('#cliente').autocomplete({
         source: function (request, response) {
             $.ajax({
@@ -49,6 +50,7 @@ $(document).ready(function () {
 
             nombreAsegurado = ui.item.value;
             plan = ui.item.plan;
+            precioDependiente = ui.item.precioDep;
 
             let nmes = itemsHelper.mesPendientePago(ui.item.mesPendiente);
             $('#ultimoMes').val(ultimaFecha);
@@ -77,6 +79,8 @@ $(document).ready(function () {
         $('#factura').val(itemsHelper.facturaPlantilla());
         $('#fechaPago').val(moment().format('YYYY-MM-DD'));
         $('#nMes').val(nMes);
+        $('#nDependiente').val(nDependientes);
+        $('#precioDependiente').val(nDependientes);
     });
 
     var itemsHelper = {
@@ -100,6 +104,8 @@ $(document).ready(function () {
             $('#factura').val('');
             $('#nombreAseg').val('');
             $('#nMes').val('');
+            $('#nDependiente').val('');
+            $('#precioDependiente').val('');
         },
         granTotal: function () {
             let subAseg = $('#subTotalAsegurado').val();

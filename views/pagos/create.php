@@ -19,6 +19,8 @@ require_once "views/header.php";
                     <input type="hidden" name="cantidad" id="cantidad">
                     <input type="hidden" name="factura" id="factura">
                     <input type="hidden" name="nMes" id="nMes">
+                    <input type="hidden" name="nDependiente" id="nDependiente">
+                    <input type="hidden" name="precioDependiente" id="precioDependiente">
 
 
                     <div class="col-md-6">

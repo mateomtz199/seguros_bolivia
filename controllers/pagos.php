@@ -44,6 +44,8 @@ class Pagos extends SessionController
         $cantidad = $this->getPost("cantidad");
         $factura = $this->getPost("factura");
         $nMes = $this->getPost("nMes");
+        $nDependiente = $this->getPost("nDependiente");
+        $precioDependiente = $this->getPost("precioDependiente");
         $this->view->render("pagos/datospago", [
             "user" => $this->user,
             "id" => $id,
@@ -52,7 +54,9 @@ class Pagos extends SessionController
             "mesPago" => $mesPago,
             "cantidad" => $cantidad,
             "factura" => $factura,
-            "nMes" => $nMes
+            "nMes" => $nMes,
+            "nDependiente" => $nDependiente,
+            "precioDependiente" => $precioDependiente
         ]);
     }
     public function pagar()
@@ -62,6 +66,9 @@ class Pagos extends SessionController
         $mesPago = $this->getPost("mesPago");
         $cantidad = $this->getPost("cantidad");
         $factura = $this->getPost("factura");
+        $nMes = $this->getPost("nMes");
+        $nDependiente = $this->getPost("nDependiente");
+        $precioDependiente = $this->getPost("precioDependiente");
         $pagos = new PagosModel();
         $pagos->setAseguradoId($id);
         $pagos->setFechaPago($fechaPago);
@@ -69,6 +76,22 @@ class Pagos extends SessionController
         $pagos->setCantidadPagada($cantidad);
         $pagos->setClaveFactura($factura);
         $pagos->save();
+        //Llamar factura
+
         $this->redirect("pagos", []);
+    }
+    public function factura($id, $fechaPago, $mesPago, $cantidad, $factura, $nMes, $nDependiente, $precioDependiente)
+    {
+
+        $this->view->render("factura/generarFacturar", [
+            "user" => $this->user,
+            "id" => $id,
+            "nombreAseg" => $nombreAseg,
+            "fechaPago" => $fechaPago,
+            "mesPago" => $mesPago,
+            "cantidad" => $cantidad,
+            "factura" => $factura,
+            "nMes" => $nMes
+        ]);
     }
 }
