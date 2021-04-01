@@ -27,7 +27,21 @@ require_once "views/header.php";
             <input type="hidden" name="precioDependiente" id="precioDependiente" value="<?php echo $precioDependiente; ?>">
             <input type="hidden" name="nombreAseg" id="nombreAseg" value="<?php echo $nombreAseg; ?>">
             <button class="btn btn-primary">Generar factura</button>
+            <a href="<?php echo constant("URL") ?>" class="btn btn-success">Ir al inicio</a>
         </form>
+
     </div>
 </div>
 </div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
