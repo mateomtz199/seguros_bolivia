@@ -10,8 +10,10 @@ class Pagos extends SessionController
     }
     public function render()
     {
+        $pagos = new PagosModel();
         $this->view->render("pagos/index", [
             "user" => $this->user,
+            "pagos" => $pagos->getAll()
         ]);
     }
     public function create()
@@ -23,16 +25,14 @@ class Pagos extends SessionController
     public function ver($parametros)
     {
         if ($parametros == null) {
-            $this->redirect("dashboard", []);
+            $this->redirect("pagos", []);
         }
         $id = $parametros[0];
-        $asegurado = new AseguradosModel();
-        $dependientes = new DependienteModel();
+        $pago = new PagosModel();
 
-        $this->view->render("asegurados/ver", [
+        $this->view->render("pagos/ver", [
             "user" => $this->user,
-            "asegurado" => $asegurado->getWithPlan($id),
-            "dependientes" => $dependientes->getPorAsegurado($id)
+            "pago" => $pago->getById($id),
         ]);
     }
     public function mostrarDatosPago()

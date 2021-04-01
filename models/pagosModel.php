@@ -68,6 +68,63 @@ class PagosModel extends Model
             return false;
         }
     }
+    public function getAll()
+    {
+        $sql = "SELECT p.id, p.fecha_pago, a.nombre, a.apellidos, p.mes_pago, p.cantidad_pagada, pl.nombre as plan
+        FROM pagos p 
+        LEFT JOIN asegurados a ON p.asegurado_id = a.id
+        LEFT JOIN planes pl ON a.plan_id = pl.id
+        ORDER BY p.fecha_pago DESC";
+        $items = array();
+        try {
+            $query = $this->query($sql);
+            while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
+                $items[] = array(
+                    "id" => $p["id"],
+                    "fecha_pago" => $p["fecha_pago"],
+                    "nombre" => $p["nombre"],
+                    "apellidos" => $p["apellidos"],
+                    "mes_pago" => $p["mes_pago"],
+                    "cantidad_pagada" => $p["cantidad_pagada"],
+                    "plan" => $p["plan"],
+                );
+            }
+            return $items;
+        } catch (PDOException $e) {
+            error_log("Pagos_Model::getAll -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
+    public function getById($id)
+    {
+        $sql = "SELECT p.id, p.fecha_pago, a.nombre, a.apellidos, p.mes_pago, p.cantidad_pagada, pl.nombre as plan, p.clave_factura
+                    FROM pagos p 
+                    LEFT JOIN asegurados a ON p.asegurado_id = a.id
+                    LEFT JOIN planes pl ON a.plan_id = pl.id
+                    WHERE p.id=:id
+                    ORDER BY p.fecha_pago DESC";
+        $items = array();
+        try {
+            $query = $this->prepare($sql);
+            $query->execute(["id" => $id]);
+            $pago = $query->fetch(PDO::FETCH_ASSOC);
+            $items = array(
+                "id" => $pago["id"],
+                "fecha_pago" => $pago["fecha_pago"],
+                "nombre" => $pago["nombre"],
+                "apellidos" => $pago["apellidos"],
+                "mes_pago" => $pago["mes_pago"],
+                "cantidad_pagada" => $pago["cantidad_pagada"],
+                "plan" => $pago["plan"],
+                "clave_factura" => $pago["clave_factura"],
+            );
+
+            return $items;
+        } catch (PDOException $e) {
+            error_log("Pagos_Model::getById -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
 
 
 
