@@ -184,10 +184,15 @@ class AseguradosModel extends Model implements IModel
 
     public function update()
     {
+        error_log("LLEGA UPDATE MODEL " . $this->id);
+        $sql = "UPDATE asegurados 
+        SET plan_id = :planId, nombre = :nombre, apellidos = :apellidos, direccion = :direccion, 
+        telefono = :telefono, foto_certificado_nacimiento = :fotoCertificado, foto_carnet_identidad = :fotoCarnet
+        WHERE id=:id";
         try {
-            $query = $this->prepare("UPDATE asegurados SET plan_id = :planId, nombre = :nombre, apellidos = :apellidos,
-                                direccion = :direccion, telefono = :telefono, foto_certificado_nacimiento = :fotoCertificado, foto_carnet_identidad = :fotoCarnet WHERE id=:id");
+            $query = $this->prepare($sql);
             $query->execute([
+                "id" => $this->id,
                 "planId" => $this->planId,
                 "nombre" => $this->nombre,
                 "apellidos" => $this->apellidos,
@@ -195,13 +200,13 @@ class AseguradosModel extends Model implements IModel
                 "telefono" => $this->telefono,
                 "fotoCertificado" => $this->fotoCertificadoNacimiento,
                 "fotoCarnet" => $this->fotoCarnetIdentidad,
-                "id" => $this->id
             ]);
             if ($query->rowCount()) {
                 return true;
             } else {
                 return false;
             }
+            error_log("MODEL DESPUES ACTUALIZAR " . $query->rowCount());
         } catch (PDOException $e) {
             error_log("Asegurados_Model::update -> Algo anda fallando " . $e);
             return false;

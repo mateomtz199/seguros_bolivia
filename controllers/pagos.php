@@ -66,10 +66,6 @@ class Pagos extends SessionController
         $mesPago = $this->getPost("mesPago");
         $cantidad = $this->getPost("cantidad");
         $factura = $this->getPost("factura");
-        $nMes = $this->getPost("nMes");
-        $nDependiente = $this->getPost("nDependiente");
-        $precioDependiente = $this->getPost("precioDependiente");
-        $nombreAseg = $this->getPost("nombreAseg");
         $pagos = new PagosModel();
         $pagos->setAseguradoId($id);
         $pagos->setFechaPago($fechaPago);
@@ -77,43 +73,21 @@ class Pagos extends SessionController
         $pagos->setCantidadPagada($cantidad);
         $pagos->setClaveFactura($factura);
         $pagos->save();
-        //Llamar factura
-
+        $idPago = $pagos->ultimoId();
         $this->view->render("pagos/postpago", [
             "user" => $this->user,
-            "id" => $id,
-            "nombreAseg" => $nombreAseg,
-            "fechaPago" => $fechaPago,
-            "mesPago" => $mesPago,
-            "cantidad" => $cantidad,
-            "factura" => $factura,
-            "nMes" => $nMes,
-            "nDependiente" => $nDependiente,
-            "precioDependiente" => $precioDependiente,
+            "idPago" => $idPago,
         ]);
     }
     public function factura()
     {
         $id = $this->getPost("aseguradoId");
-        $fechaPago = $this->getPost("fechaPago");
-        $mesPago = $this->getPost("mesPago");
-        $cantidad = $this->getPost("cantidad");
-        $factura = $this->getPost("factura");
-        $nMes = $this->getPost("nMes");
-        $nDependiente = $this->getPost("nDependiente");
-        $precioDependiente = $this->getPost("precioDependiente");
-        $nombreAseg = $this->getPost("nombreAseg");
+        $pago = new PagosModel();
+        $datosPago = $pago->getById($id);
         $this->view->render("factura/generarFacturar", [
             "user" => $this->user,
             "id" => $id,
-            "nombreAseg" => $nombreAseg,
-            "fechaPago" => $fechaPago,
-            "mesPago" => $mesPago,
-            "cantidad" => $cantidad,
-            "factura" => $factura,
-            "nMes" => $nMes,
-            "nDependiente" => $nDependiente,
-            "precioDependiente" => $precioDependiente,
+            "datosPago" => $datosPago,
         ]);
     }
 }

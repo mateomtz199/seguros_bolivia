@@ -146,8 +146,8 @@ class Asegurados extends SessionController
                 $this->redirect("asegurados", []);
             }
         }
-
         $asegurado = new AseguradosModel();
+        $asegurado->setId($this->getPost("id"));
         $asegurado->setPlanId($this->getPost("planId"));
         $asegurado->setNombre($this->getPost("nombre"));
         $asegurado->setApellidos($this->getPost("apellidos"));
@@ -212,5 +212,20 @@ class Asegurados extends SessionController
         $json = $asegurado->getWithPlanJson($valor);
 
         echo json_encode($json);
+    }
+    public function ver($parametros)
+    {
+        if ($parametros == null) {
+            $this->redirect("dashboard", []);
+        }
+        $id = $parametros[0];
+        $asegurado = new AseguradosModel();
+        $dependientes = new DependienteModel();
+
+        $this->view->render("asegurados/ver", [
+            "user" => $this->user,
+            "asegurado" => $asegurado->getWithPlan($id),
+            "dependientes" => $dependientes->getPorAsegurado($id)
+        ]);
     }
 }

@@ -97,12 +97,13 @@ class PagosModel extends Model
     }
     public function getById($id)
     {
-        $sql = "SELECT p.id, p.fecha_pago, a.nombre, a.apellidos, p.mes_pago, p.cantidad_pagada, pl.nombre as plan, p.clave_factura
-                    FROM pagos p 
-                    LEFT JOIN asegurados a ON p.asegurado_id = a.id
-                    LEFT JOIN planes pl ON a.plan_id = pl.id
-                    WHERE p.id=:id
-                    ORDER BY p.fecha_pago DESC";
+        $sql = "SELECT p.id, p.fecha_pago, p.mes_pago, p.cantidad_pagada, p.clave_factura, a.id as aid, a.nombre, 
+        a.apellidos, a.direccion, a.telefono, pl.nombre as plan, pl.precio, pl.precio_dependiente, 
+        (SELECT COUNT(*) FROM dependientes WHERE asegurado_id = a.id) AS ndependientes
+        FROM pagos p 
+        LEFT JOIN asegurados a ON p.asegurado_id = a.id
+        LEFT JOIN planes pl ON a.plan_id = pl.id
+        WHERE p.id=:id";
         $items = array();
         try {
             $query = $this->prepare($sql);
@@ -111,14 +112,19 @@ class PagosModel extends Model
             $items = array(
                 "id" => $pago["id"],
                 "fecha_pago" => $pago["fecha_pago"],
-                "nombre" => $pago["nombre"],
-                "apellidos" => $pago["apellidos"],
                 "mes_pago" => $pago["mes_pago"],
                 "cantidad_pagada" => $pago["cantidad_pagada"],
-                "plan" => $pago["plan"],
                 "clave_factura" => $pago["clave_factura"],
+                "aid" => $pago["aid"],
+                "nombre" => $pago["nombre"],
+                "apellidos" => $pago["apellidos"],
+                "direccion" => $pago["direccion"],
+                "telefono" => $pago["telefono"],
+                "plan" => $pago["plan"],
+                "precio" => $pago["precio"],
+                "precio_dependiente" => $pago["precio_dependiente"],
+                "ndependientes" => $pago["ndependientes"],
             );
-
             return $items;
         } catch (PDOException $e) {
             error_log("Pagos_Model::getById -> Algo anda fallando " . $e);
@@ -126,7 +132,15 @@ class PagosModel extends Model
         }
     }
 
+    public function ultimoId()
+    {
+        $query = $this->prepare("SELECT MAX(id) AS id FROM pagos");
+        $query->execute();
+        $pago = $query->fetch(PDO::FETCH_ASSOC);
+        return $pago["id"];
+    }
 
+    /* Getters y setters */
 
     public function getId()
     {

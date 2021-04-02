@@ -7,14 +7,7 @@ $dompdf = new Dompdf();
 ob_start();
 
 $id = $this->d["id"];
-$nombreAseg  = $this->d["nombreAseg"];
-$fechaPago = $this->d["fechaPago"];
-$mesPago = $this->d["mesPago"];
-$cantidad = $this->d["cantidad"];
-$factura = $this->d["factura"];
-$nMes = $this->d["nMes"];
-$nDependiente = $this->d["nDependiente"];
-$precioDependiente = $this->d["precioDependiente"];
+$p  = $this->d["datosPago"];
 
 include "factura.php";
 $html = ob_get_clean();

@@ -65,7 +65,7 @@ class View
     public function showError()
     {
         if (array_key_exists('error', $this->d)) {
-            echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Error</strong> " . $this->d['error'] .
                 "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
         }
@@ -74,7 +74,7 @@ class View
     public function showSuccess()
     {
         if (array_key_exists('success', $this->d)) {
-            echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
             <strong>Error</strong> " . $this->d['success'] .
                 "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
         }

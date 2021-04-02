@@ -29,7 +29,7 @@
         }
 
         .invoice-box table tr td:nth-child(2) {
-            text-align: right;
+            text-align: left;
         }
 
         .invoice-box table tr.top table td {
@@ -64,9 +64,10 @@
             border-bottom: none;
         }
 
-        .invoice-box table tr.total td:nth-child(2) {
+        .invoice-box table tr.total td:nth-child(4) {
             border-top: 2px solid #eee;
             font-weight: bold;
+            font-size: 20px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -107,12 +108,12 @@
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="<?php  ?>" style="width: 100%; max-width: 200px" />
+                                <img src="public/seguro.png" style="width: 100%; max-width: 200px" />
                             </td>
 
                             <td>
-                                Factura #: <?php echo $id; ?><br />
-                                Creado: <?php echo $fechaPago; ?><br />
+                                Factura #: <?php echo $p["id"]; ?><br />
+                                Creado: <?php echo $p["fecha_pago"]; ?><br />
                             </td>
                         </tr>
                     </table>
@@ -124,57 +125,48 @@
                     <table>
                         <tr>
                             <td>
-                                Bolivia<br />
-                                CP: 12343, Ciudad<br />
+                                Seguros Bolivia S. A<br />
+                                CP: 12343, Bolivia<br />
                                 Calle La Asunción, No. 213
                             </td>
 
                             <td>
-                                Seguros Bolivia S. A.<br />
-                                Edgar<br />
-                                edgar@seguros.com
+                                <?php echo $p["nombre"] . " " . $p["apellidos"]; ?><br />
+                                <?php echo $p["direccion"]; ?><br />
+                                <?php echo $p["telefono"]; ?>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
 
+        </table>
+        <table>
             <tr class="heading">
-                <td>Forma de pago</td>
-
-                <td>$</td>
+                <td>Cantidad</td>
+                <td>Descripción</td>
+                <td>Precio unitario</td>
+                <td>Importe</td>
             </tr>
-
-            <tr class="details">
-                <td>Efectivo</td>
-
-                <td>1000</td>
-            </tr>
-
-            <tr class="heading">
-                <td>Item</td>
-
-                <td>Price</td>
-            </tr>
-
             <tr class="item">
-                <td><?php echo $fechaPago; ?></td>
-
-                <td>$300.00</td>
+                <td>1</td>
+                <td>Pago de <?php echo $p["plan"]; ?>, vence el <?php echo $p["mes_pago"]; ?></td>
+                <td><?php echo $p["precio"]; ?></td>
+                <td><?php echo $p["mes_pago"]; ?></td>
             </tr>
-
-
-
             <tr class="item last">
-                <td>Domain name (1 year)</td>
-
-                <td>$10.00</td>
+                <td><?php echo $p["ndependientes"]; ?></td>
+                <td>Pago de mensualidad de dependientes</td>
+                <td><?php echo $p["precio_dependiente"]; ?></td>
+                <td><?php echo $p["ndependientes"] * $p["precio_dependiente"]; ?></td>
             </tr>
-
             <tr class="total">
                 <td></td>
-
-                <td>Total: $385.00</td>
+                <td></td>
+                <td></td>
+                <td>
+                    $<?php echo $p["cantidad_pagada"]; ?>
+                </td>
             </tr>
         </table>
     </div>

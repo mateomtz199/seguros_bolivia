@@ -8,10 +8,12 @@ require_once "views/header.php";
 
 <div class="col-9">
 
-    <h4>Registrar asegurado</h4>
+    <h4>Actualizar asegurado</h4>
 
     <?php $this->showMessages(); ?>
-    <form action="<?php echo constant("URL") ?>asegurados/newAsegurado" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+    <form action="<?php echo constant("URL") ?>asegurados/update" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="id" value="<?php echo $asegurado->getId(); ?>">
+
         <div class="row mb-3">
             <label for="nombre" class="col-sm-4 col-form-label">Selecciona un plan</label>
             <div class="col-sm-8">
@@ -72,7 +74,7 @@ require_once "views/header.php";
 
         </div>
         <p>
-            <input type="submit" class="btn btn-primary" value="Registrar">
+            <input type="submit" class="btn btn-primary" value="Actualizar">
         </p>
     </form>
 </div>

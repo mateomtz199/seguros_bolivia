@@ -41,7 +41,6 @@ $(document).ready(function () {
             $('#aseguradoId').val(ui.item.id);
             $('#precio').val(ui.item.precio);
             $('#dependientes').val(ui.item.dependientes);
-            $('#precioDependiente').val(ui.item.precioDep);
 
             costoMensualAsegurado = ui.item.precio;
             costoMensualDependiente = ui.item.precioDep;
@@ -50,11 +49,11 @@ $(document).ready(function () {
 
             nombreAsegurado = ui.item.value;
             plan = ui.item.plan;
-            precioDependiente = ui.item.precioDep;
 
             let nmes = itemsHelper.mesPendientePago(ui.item.mesPendiente);
             $('#ultimoMes').val(ultimaFecha);
             $('#mesPendiente').val(nmes);
+            $('#precioDependiente1').val(costoMensualDependiente);
         },
     });
 
@@ -80,7 +79,7 @@ $(document).ready(function () {
         $('#fechaPago').val(moment().format('YYYY-MM-DD'));
         $('#nMes').val(nMes);
         $('#nDependiente').val(nDependientes);
-        $('#precioDependiente').val(nDependientes);
+        $('#precioDependiente').val(costoMensualDependiente);
     });
 
     var itemsHelper = {

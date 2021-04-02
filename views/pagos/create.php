@@ -44,7 +44,7 @@ require_once "views/header.php";
                     </div>
                     <div class="col-md-4">
                         <label for="Precio dependiente" class="form-label">Precio dependiente por mes</label>
-                        <input type="text" class="form-control" name="precioDependiente" id="precioDependiente" disabled>
+                        <input type="text" class="form-control" name="precioDependiente1" id="precioDependiente1" disabled>
                     </div>
 
                     <div class="col-md-6">
