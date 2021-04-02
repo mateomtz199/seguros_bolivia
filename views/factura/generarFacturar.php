@@ -2,8 +2,11 @@
 include_once "dompdf/autoload.inc.php";
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
-$dompdf = new Dompdf();
+$options = new Options();
+$options->set('isRemoteEnabled', TRUE);
+$dompdf = new Dompdf($options);
 ob_start();
 
 $id = $this->d["id"];

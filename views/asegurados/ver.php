@@ -89,6 +89,25 @@ require_once "views/header.php";
                     </tbody>
                 </table>
             </div>
+            <div class="row mt-3">
+                <ul class="timeline">
+                    <li>
+                        <a target="_blank" href="">New Web Design</a>
+                        <a href="#" class="float-right">21 March, 2014</a>
+                        <p>s mollis. Duis sagittis ligula in sodales vehicula....</p>
+                    </li>
+                    <li>
+                        <a href="#">21 000 Job Seekers</a>
+                        <a href="#" class="float-right">4 March, 2014</a>
+                        <p>ntesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                    </li>
+                    <li>
+                        <a href="#">Awesome Employers</a>
+                        <a href="#" class="float-right">1 April, 2014</a>
+                        <p>nt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -96,6 +115,41 @@ require_once "views/header.php";
 </div>
 
 </div>
+<style>
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+
+    ul.timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    ul.timeline>li {
+        margin: 20px 0;
+        padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+        content: ' ';
+        background: white;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #22c0e8;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        z-index: 400;
+    }
+</style>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

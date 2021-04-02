@@ -109,9 +109,8 @@
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="public/seguro.png" style="width: 100%; max-width: 200px" />
+                                <img src="<?php echo constant("URL") ?>/public/seguro.png" style="width: 100%; max-width: 200px" />
                             </td>
-
                             <td>
                                 Factura #: <?php echo $p["id"]; ?><br />
                                 Creado: <?php echo $p["fecha_pago"]; ?><br />

@@ -8,6 +8,7 @@ require_once "views/header.php";
     <hr>
     <div class="card">
         <div class="card-body">
+            <a href="<?php echo constant("URL") ?>pagos/create" class="btn btn-warning">Realizar pago</a>
             <table class="table">
                 <thead>
                     <tr>
