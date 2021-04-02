@@ -1,5 +1,6 @@
 <?php
 require_once "models/aseguradosmodel.php";
+require_once "models/pagosModel.php";
 class Dashboard extends SessionController
 {
     private $user;
@@ -13,12 +14,14 @@ class Dashboard extends SessionController
     function render()
     {
         $aseguradosModel = new AseguradosModel();
+        $pagos = new PagosModel();
         $this->view->render("dashboard/index", [
             "user" => $this->user,
             "asegurados" => $aseguradosModel->getAllWithPlan(),
             "planesCantidad" => $aseguradosModel->cantidadPorPlan(),
             "cantidadAsegurados" => $aseguradosModel->cantidadAsegurados(),
             "cantidadDependientes" => $aseguradosModel->cantidadDependientes(),
+            "mesesAtrasados" => $pagos->aseguradosMesesAtrasados()
         ]);
     }
     public function getAsegurados()

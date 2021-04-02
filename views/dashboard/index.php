@@ -4,6 +4,7 @@ $usuario = $this->d["user"];
 $planesCantidad = $this->d["planesCantidad"];
 $cantidadAsegurados = $this->d["cantidadAsegurados"];
 $cantidadDependientes = $this->d["cantidadDependientes"];
+$pendientesPago = $this->d["mesesAtrasados"];
 
 require_once "views/header.php";
 ?>
@@ -13,7 +14,9 @@ require_once "views/header.php";
 <div class="col-9">
     <h3>Dashboard</h3>
     <hr>
+    <div class="row">
 
+    </div>
 
     <div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -61,6 +64,34 @@ require_once "views/header.php";
             </div>
         </div>
     </div>
+    <!-- Pendientes pago -->
+    <?php if ($pendientesPago != null) { ?>
+        <h2>Asegurados con meses pendientes de pago</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Direccion</th>
+                    <th>Fecha de vecimiento</th>
+                    <th>Meses pendientes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($pendientesPago as $asegurado) { ?>
+                    <tr>
+                        <td> <?php echo $asegurado["nombre"] ?></td>
+                        <td> <?php echo $asegurado["apellidos"] ?></td>
+                        <td> <?php echo $asegurado["telefono"] ?></td>
+                        <td> <?php echo $asegurado["direccion"] ?></td>
+                        <td> <?php echo $asegurado["ultimo_pago"] ?></td>
+                        <td> <?php echo $asegurado["meses_pendientes"] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    <?php } ?>
 </div>
 <?php
 $this->showMessages();

@@ -141,6 +141,35 @@ class PagosModel extends Model
         $pago = $query->fetch(PDO::FETCH_ASSOC);
         return $pago["id"];
     }
+    public function aseguradosMesesAtrasados()
+    {
+        $sql = "SELECT 
+        MAX(mes_pago) AS ultimo_pago, p.asegurado_id, a.nombre, a.apellidos, a.telefono, a.direccion,
+        TIMESTAMPDIFF(MONTH, MAX(mes_pago), CURDATE()) AS meses_pendientes
+        FROM pagos p
+        LEFT JOIN asegurados a ON p.asegurado_id = a.id
+        WHERE TIMESTAMPDIFF(MONTH, mes_pago, CURDATE()) > 1
+        GROUP BY p.asegurado_id";
+        $items = array();
+        try {
+            $query = $this->query($sql);
+            while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
+                $items[] = array(
+                    "ultimo_pago" => $p["ultimo_pago"],
+                    "asegurado_id" => $p["asegurado_id"],
+                    "nombre" => $p["nombre"],
+                    "apellidos" => $p["apellidos"],
+                    "telefono" => $p["telefono"],
+                    "direccion" => $p["direccion"],
+                    "meses_pendientes" => $p["meses_pendientes"],
+                );
+            }
+            return $items;
+        } catch (PDOException $e) {
+            error_log("Asegurados_Model::cantidadPorPlan -> Algo anda fallando " . $e);
+            return false;
+        }
+    }
 
     /* Getters y setters */
 
