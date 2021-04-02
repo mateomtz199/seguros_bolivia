@@ -3,6 +3,7 @@ require_once "models/aseguradosmodel.php";
 require_once "models/planesmodel.php";
 require_once "models/userModel.php";
 require_once "models/dependientesmodel.php";
+require_once "models/seguimientoPlanModel.php";
 class Asegurados extends SessionController
 {
     private $user;
@@ -221,11 +222,13 @@ class Asegurados extends SessionController
         $id = $parametros[0];
         $asegurado = new AseguradosModel();
         $dependientes = new DependienteModel();
+        $seguimiento = new SeguimientoPlanModel();
 
         $this->view->render("asegurados/ver", [
             "user" => $this->user,
             "asegurado" => $asegurado->getWithPlan($id),
-            "dependientes" => $dependientes->getPorAsegurado($id)
+            "dependientes" => $dependientes->getPorAsegurado($id),
+            "seguimiento" => $seguimiento->getByAsegurado($id)
         ]);
     }
 }

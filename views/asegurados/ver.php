@@ -2,6 +2,7 @@
 $usuario = $this->d["user"];
 $asegurado = $this->d["asegurado"];
 $dependientes = $this->d["dependientes"];
+$seguimientos = $this->d["seguimiento"];
 require_once "views/header.php";
 ?>
 
@@ -89,24 +90,20 @@ require_once "views/header.php";
                     </tbody>
                 </table>
             </div>
+
+            <h2>Cambios de planes del asegurado</h2>
             <div class="row mt-3">
-                <ul class="timeline">
-                    <li>
-                        <a target="_blank" href="">New Web Design</a>
-                        <a href="#" class="float-right">21 March, 2014</a>
-                        <p>s mollis. Duis sagittis ligula in sodales vehicula....</p>
-                    </li>
-                    <li>
-                        <a href="#">21 000 Job Seekers</a>
-                        <a href="#" class="float-right">4 March, 2014</a>
-                        <p>ntesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
-                    </li>
-                    <li>
-                        <a href="#">Awesome Employers</a>
-                        <a href="#" class="float-right">1 April, 2014</a>
-                        <p>nt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
-                    </li>
-                </ul>
+                <div class="col-8">
+                    <ul class="timeline">
+                        <?php foreach ($seguimientos as $seguimiento) { ?>
+                            <li>
+                                <strong><?php echo $seguimiento["accion"]; ?></strong>
+                                <p class="float-end"><?php echo $seguimiento["fecha_cambio"]; ?></p>
+                                <p>Cambio de plan: de <?php echo $seguimiento["plan_old"]; ?> a <?php echo $seguimiento["plan_new"]; ?></p>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -134,7 +131,7 @@ require_once "views/header.php";
 
     ul.timeline>li {
         margin: 20px 0;
-        padding-left: 20px;
+        padding-left: 40px;
     }
 
     ul.timeline>li:before {
