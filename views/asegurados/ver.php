@@ -90,21 +90,22 @@ require_once "views/header.php";
                     </tbody>
                 </table>
             </div>
-
-            <h2>Cambios de planes del asegurado</h2>
-            <div class="row mt-3">
-                <div class="col-8">
-                    <ul class="timeline">
-                        <?php foreach ($seguimientos as $seguimiento) { ?>
-                            <li>
-                                <strong><?php echo $seguimiento["accion"]; ?></strong>
-                                <p class="float-end"><?php echo $seguimiento["fecha_cambio"]; ?></p>
-                                <p>Cambio de plan: de <?php echo $seguimiento["plan_old"]; ?> a <?php echo $seguimiento["plan_new"]; ?></p>
-                            </li>
-                        <?php } ?>
-                    </ul>
+            <?php if ($seguimientos != null) { ?>
+                <h2>Cambios de planes del asegurado</h2>
+                <div class="row mt-3">
+                    <div class="col-8">
+                        <ul class="timeline">
+                            <?php foreach ($seguimientos as $seguimiento) { ?>
+                                <li>
+                                    <strong><?php echo $seguimiento["accion"]; ?></strong>
+                                    <p class="float-end"><?php echo $seguimiento["fecha_cambio"]; ?></p>
+                                    <p>Cambio de plan: de <?php echo $seguimiento["plan_old"]; ?> a <?php echo $seguimiento["plan_new"]; ?></p>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>

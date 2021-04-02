@@ -10,7 +10,7 @@ class Planes extends SessionController
     public function render()
     {
         $planes = new PlanesModel();
-        error_log("Asegurados::RENDER() ");
+        //error_log("Planes::RENDER() ");
         $this->view->render("planes/index", [
             "user" => $this->user,
             "planes" => $planes->getAll()

@@ -34,7 +34,7 @@ class Asegurados extends SessionController
         $extension = explode(".", $fotoCertificado["name"]);
         $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
         $ext = $extension[sizeof($extension) - 1];
-        $hashCertificado = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $hashCertificado = md5(Date("Ymdis") . $filename) . "." . $ext;
         $targetFile = $urlImages . $hashCertificado;
         $upLoadOk = false;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
@@ -58,7 +58,7 @@ class Asegurados extends SessionController
         $extension = explode(".", $fotoCarnet["name"]);
         $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
         $ext = $extension[sizeof($extension) - 1];
-        $hashCarnet = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $hashCarnet = md5(Date("Ymdis") . $filename) . "." . $ext;
         $targetFile = $urlImages . $hashCarnet;
         $upLoadOk = false;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
@@ -105,7 +105,7 @@ class Asegurados extends SessionController
         $extension = explode(".", $fotoCertificado["name"]);
         $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
         $ext = $extension[sizeof($extension) - 1];
-        $hashCertificado = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $hashCertificado = md5(Date("Ymdis") . $filename) . "." . $ext;
         $targetFile = $urlImages . $hashCertificado;
         $upLoadOk = false;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
@@ -129,7 +129,7 @@ class Asegurados extends SessionController
         $extension = explode(".", $fotoCarnet["name"]);
         $filename = $extension[sizeof($extension) - 2]; //nombre del archivo
         $ext = $extension[sizeof($extension) - 1];
-        $hashCarnet = md5(Date("Ymdi") . $filename) . "." . $ext;
+        $hashCarnet = md5(Date("Ymdis") . $filename) . "." . $ext;
         $targetFile = $urlImages . $hashCarnet;
         $upLoadOk = false;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));

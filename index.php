@@ -1,4 +1,5 @@
 <?php
+
 /** https://stackoverflow.com/questions/3531703/how-do-i-log-errors-and-warnings-into-a-file */
 error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
 
@@ -8,7 +9,7 @@ ini_set('display_errors', FALSE); // Error/Exception display, use FALSE only in 
 
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 ini_set('error_log', 'errors.log'); // Logging file path
-error_log("Prueba de errores");
+// error_log("Prueba de errores");
 
 require_once "libs/db.php";
 require_once "classes/errormessages.php";
