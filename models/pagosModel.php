@@ -7,6 +7,7 @@ class PagosModel extends Model
     private $fechaPago;
     private $mesPago;
     private $cantidadPagada;
+    private $nmes;
 
     function __construct()
     {
@@ -14,16 +15,16 @@ class PagosModel extends Model
     }
     public function save()
     {
-        $sql = "INSERT INTO pagos (asegurado_id, clave_factura, fecha_pago, mes_pago, cantidad_pagada)
-        VALUES(:aseguradoId, :claveFactura, :fechaPago, :mesPago, :cantidadPagada)";
+        $sql = "INSERT INTO pagos (asegurado_id, clave_factura, mes_pago, cantidad_pagada, nmes)
+        VALUES(:aseguradoId, :claveFactura, :mesPago, :cantidadPagada, :nmes)";
         try {
             $query = $this->prepare($sql);
             $query->execute([
                 "aseguradoId" => $this->aseguradoId,
                 "claveFactura" => $this->claveFactura,
-                "fechaPago" => $this->fechaPago,
                 "mesPago" => $this->mesPago,
                 "cantidadPagada" => $this->cantidadPagada,
+                "nmes" => $this->nmes,
             ]);
             if ($query->rowCount()) {
                 return true;
@@ -97,7 +98,7 @@ class PagosModel extends Model
     }
     public function getById($id)
     {
-        $sql = "SELECT p.id, p.fecha_pago, p.mes_pago, p.cantidad_pagada, p.clave_factura, a.id as aid, a.nombre, 
+        $sql = "SELECT p.id, p.fecha_pago, p.mes_pago, p.cantidad_pagada, p.clave_factura, p.nmes, a.id as aid, a.nombre, 
         a.apellidos, a.direccion, a.telefono, pl.nombre as plan, pl.precio, pl.precio_dependiente, 
         (SELECT COUNT(*) FROM dependientes WHERE asegurado_id = a.id) AS ndependientes
         FROM pagos p 
@@ -124,6 +125,7 @@ class PagosModel extends Model
                 "precio" => $pago["precio"],
                 "precio_dependiente" => $pago["precio_dependiente"],
                 "ndependientes" => $pago["ndependientes"],
+                "nmes" => $pago["nmes"],
             );
             return $items;
         } catch (PDOException $e) {
@@ -199,6 +201,16 @@ class PagosModel extends Model
     public function setCantidadPagada($cantidadPagada): self
     {
         $this->cantidadPagada = $cantidadPagada;
+        return $this;
+    }
+
+    public function getNmes()
+    {
+        return $this->nmes;
+    }
+    public function setNmes($nmes): self
+    {
+        $this->nmes = $nmes;
         return $this;
     }
 }

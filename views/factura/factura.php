@@ -28,7 +28,7 @@
             vertical-align: top;
         }
 
-        .invoice-box table tr td:nth-child(2) {
+        .invoice-box table tr td:nth-child(5) {
             text-align: left;
         }
 
@@ -47,9 +47,10 @@
         }
 
         .invoice-box table tr.heading td {
-            background: #eee;
-            border-bottom: 1px solid #ddd;
+            background: #0275d8;
+            border-bottom: 1px solid #0275d8;
             font-weight: bold;
+            color: white;
         }
 
         .invoice-box table tr.details td {
@@ -64,8 +65,8 @@
             border-bottom: none;
         }
 
-        .invoice-box table tr.total td:nth-child(4) {
-            border-top: 2px solid #eee;
+        .invoice-box table tr.total td {
+            border-top: 2px solid #0275d8;
             font-weight: bold;
             font-size: 20px;
         }
@@ -144,28 +145,32 @@
         <table>
             <tr class="heading">
                 <td>Cantidad</td>
+                <td>Unidad</td>
                 <td>Descripción</td>
                 <td>Precio unitario</td>
                 <td>Importe</td>
             </tr>
             <tr class="item">
-                <td>1</td>
+                <td><?php echo $p["nmes"]; ?></td>
+                <td>Meses</td>
                 <td>Pago de <?php echo $p["plan"]; ?>, vence el <?php echo $p["mes_pago"]; ?></td>
                 <td><?php echo $p["precio"]; ?></td>
-                <td><?php echo $p["mes_pago"]; ?></td>
+                <td>$ <?php echo $p["nmes"] * $p["precio"]; ?></td>
             </tr>
             <tr class="item last">
                 <td><?php echo $p["ndependientes"]; ?></td>
+                <td>Asegurados</td>
                 <td>Pago de mensualidad de dependientes</td>
                 <td><?php echo $p["precio_dependiente"]; ?></td>
-                <td><?php echo $p["ndependientes"] * $p["precio_dependiente"]; ?></td>
+                <td>$ <?php echo $p["ndependientes"] * $p["precio_dependiente"]; ?></td>
             </tr>
             <tr class="total">
+                <td>Total</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td>
-                    $<?php echo $p["cantidad_pagada"]; ?>
+                    $ <?php echo $p["cantidad_pagada"]; ?>
                 </td>
             </tr>
         </table>

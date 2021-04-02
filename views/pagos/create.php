@@ -65,7 +65,6 @@ require_once "views/header.php";
                         <label for="Número de meses a pagar" class="form-label"><strong>Número de meses a pagar</strong></label>
                         <input type="number" class="form-control" name="nMesPagar" id="nMesPagar" required>
                     </div>
-
                     <div class="col-md-4">
                         <label for="Número de meses a pagar" class="form-label"><strong>Subtotal asegurado</strong></label>
                         <input type="number" class="form-control" name="subTotalAsegurado" id="subTotalAsegurado" disabled>

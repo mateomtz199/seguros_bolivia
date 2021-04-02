@@ -7,29 +7,39 @@ require_once "views/header.php";
     <h1>Detalle de pago</h1>
     <hr>
     <div class="card">
-        <div class="card-body">
-            <div class="card text-white text-center bg-success mb-3" style="max-width: 20rem;">
+        <div class="row">
+            <div class="col-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $pago["plan"]; ?></h5>
-                    <h2>$ <?php echo $pago["cantidad_pagada"]; ?></h2>
-                    <p><?php echo $pago["fecha_pago"]; ?></p>
+                    <div class="card text-white text-center bg-success mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $pago["plan"]; ?></h5>
+                            <h2>$ <?php echo $pago["cantidad_pagada"]; ?></h2>
+                            <p><?php echo $pago["fecha_pago"]; ?></p>
+                        </div>
+                    </div>
+
+                    <p>Asegurado:</p>
+                    <h5> <?php echo $pago["nombre"] . " " . $pago["apellidos"]; ?></h5>
+
+                    <p>Importe:</p>
+                    <h5>$ <?php echo $pago["cantidad_pagada"]; ?></h5>
+
+                    <p>Mes de pago:</p>
+                    <h5> <?php echo $pago["mes_pago"]; ?></h5>
+
+                    <p>Fecha realizada:</p>
+                    <h5> <?php echo $pago["fecha_pago"]; ?></h5>
+
+                    <p>Meses pagados:</p>
+                    <h5> <?php echo $pago["nmes"]; ?> mes(es)</h5>
                 </div>
             </div>
-
-            <p>Asegurado:</p>
-            <h5> <?php echo $pago["nombre"] . " " . $pago["apellidos"]; ?></h5>
-
-            <p>Importe:</p>
-            <h5>$ <?php echo $pago["cantidad_pagada"]; ?></h5>
-
-            <p>Mes de pago:</p>
-            <h5> <?php echo $pago["mes_pago"]; ?></h5>
-
-            <p>Fecha realizada:</p>
-            <h5> <?php echo $pago["fecha_pago"]; ?></h5>
-
-            <p>Descripción:</p>
-            <pre> <?php echo $pago["clave_factura"]; ?></pre>
+            <div class="col-4">
+                <form action="<?php echo constant("URL") ?>pagos/factura" method="post">
+                    <input type="hidden" name="aseguradoId" id="aseguradoId" value="<?php echo $pago["id"]; ?>">
+                    <button class="btn btn-primary mt-5">Ver factura</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

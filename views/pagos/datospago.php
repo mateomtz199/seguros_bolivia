@@ -6,7 +6,7 @@ $fechaPago = $this->d["fechaPago"];
 $mesPago = $this->d["mesPago"];
 $cantidad = $this->d["cantidad"];
 $factura = md5(uniqid()) . $this->d["factura"];
-$nMes = $this->d["nMes"];
+$nMes = $this->d["nmes"];
 $nDependiente = $this->d["nDependiente"];
 $precioDependiente = $this->d["precioDependiente"];
 
@@ -33,7 +33,7 @@ require_once "views/header.php";
                 <input type="hidden" name="cantidad" id="cantidad" value="<?php echo $cantidad; ?>">
                 <input type="hidden" name="factura" id="factura" value="<?php echo $factura; ?>">
                 <!-- para Factura -->
-                <input type="hidden" name="nMes" id="nMes" value="<?php echo $nMes; ?>">
+                <input type="hidden" name="nmes" id="nmes" value="<?php echo $nMes; ?>">
                 <input type="hidden" name="nDependiente" id="nDependiente" value="<?php echo $nDependiente; ?>">
                 <input type="hidden" name="precioDependiente" id="precioDependiente" value="<?php echo $precioDependiente; ?>">
                 <input type="hidden" name="nombreAseg" id="nombreAseg" value="<?php echo $nombreAseg; ?>">

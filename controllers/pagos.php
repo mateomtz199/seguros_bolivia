@@ -43,9 +43,9 @@ class Pagos extends SessionController
         $mesPago = $this->getPost("mesPago");
         $cantidad = $this->getPost("cantidad");
         $factura = $this->getPost("factura");
-        $nMes = $this->getPost("nMes");
         $nDependiente = $this->getPost("nDependiente");
         $precioDependiente = $this->getPost("precioDependiente");
+        $nmes = $this->getPost("nMesPagar");
         $this->view->render("pagos/datospago", [
             "user" => $this->user,
             "id" => $id,
@@ -54,24 +54,24 @@ class Pagos extends SessionController
             "mesPago" => $mesPago,
             "cantidad" => $cantidad,
             "factura" => $factura,
-            "nMes" => $nMes,
             "nDependiente" => $nDependiente,
-            "precioDependiente" => $precioDependiente
+            "precioDependiente" => $precioDependiente,
+            "nmes" => $nmes
         ]);
     }
     public function pagar()
     {
         $id = $this->getPost("aseguradoId");
-        $fechaPago = $this->getPost("fechaPago");
         $mesPago = $this->getPost("mesPago");
         $cantidad = $this->getPost("cantidad");
         $factura = $this->getPost("factura");
+        $nmes = $this->getPost("nmes");
         $pagos = new PagosModel();
         $pagos->setAseguradoId($id);
-        $pagos->setFechaPago($fechaPago);
         $pagos->setMesPago($mesPago);
         $pagos->setCantidadPagada($cantidad);
         $pagos->setClaveFactura($factura);
+        $pagos->setNmes($nmes);
         $pagos->save();
         $idPago = $pagos->ultimoId();
         $this->view->render("pagos/postpago", [
