@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "scripts": {
+    },
+    "devDependencies": {
+        "illuminate/database": "*",
+    }
+}
